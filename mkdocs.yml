@@ -3,68 +3,67 @@ site_description: "QuantJourney with Code is a blog about quantitative finance, 
 site_author: Jakub Polec
 site_url: https://quantjourney.dev/
 
-#logo: logo_small_with_text_transparent.png
 theme:
   name: material
 
 nav:
 - Home:
   - Overview: index.md
-  - Start: doc/documentation.md
+  - Start: documentation.md
   - Strategies: strat/strategies.md
-  - Backtesting: tutorials/backtesting-general.md
+  - Backtesting: backtesting.md
   - Videos: videos.md
 - Documentation:
   - Overview:
-    - Start: doc/documentation.md
-    - Repository Installation: doc/repo.md
-    - DataBase Installation: doc/installation.md
-  - '_______________________': index1.md
+    - Start: documentation.md
+    - Repository Installation: repo.md
+    - DataBase Installation: installation.md
+
   - Data Utils:
-    - Data Manager: doc/utils/data_manager.md
-    - Data Connector: doc/utils/data_connector.md
+    - Data Manager: utils/data_manager.md
+    - Data Connector: utils/data_connector.md
   - Assets:
-    - Indices: doc/assets/indices.md
-    - Crypto: doc/assets/crypto.md
-    - Equities: doc/assets/equities.md
-    - ETFs: doc/assets/etfs.md
-    - Forex: doc/assets/forex.md
-    - Futures: doc/assets/futures.md
-    - Macro: doc/assets/macro.md
-    - Bonds: doc/assets/bonds.md
-    - Commodities: doc/assets/commodities.md
-    - REITs: doc/assets/reits.md
+    - Indices: assets/indices.md
+    - Crypto: assets/crypto.md
+    - Equities: assets/equities.md
+    - ETFs: assets/etfs.md
+    - Forex: assets/forex.md
+    - Futures: assets/futures.md
+    - Macro: assets/macro.md
+    - Bonds: assets/bonds.md
+    - Commodities: assets/commodities.md
+    - REITs: assets/reits.md
   - Connectors:
-    - CCXT Connector: doc/connectors/ccxt_connector.md
-    - EOD Connector: doc/connectors/eod_connector.md
-    - FMP Connector: doc/connectors/fmp_connector.md
-    - CNNFG Connector: doc/connectors/cnnfg_connector.md
-    - FRED Connector: doc/connectors/fred_connector.md
-    - Oanda Connector: doc/connectors/oanda_connector.md
-    - Quandl Connector: doc/connectors/quandl_connector.md
-    - SEC Connector: doc/connectors/sec_connector.md
-    - Yahoo Finance Connector: doc/connectors/yf_connector.md
+    - CCXT Connector: connectors/ccxt_connector.md
+    - EOD Connector: connectors/eod_connector.md
+    - FMP Connector: connectors/fmp_connector.md
+    - CNNFG Connector: connectors/cnnfg_connector.md
+    - FRED Connector: connectors/fred_connector.md
+    - Oanda Connector: connectors/oanda_connector.md
+    - Quandl Connector: connectors/quandl_connector.md
+    - SEC Connector: connectors/sec_connector.md
+    - Yahoo Finance Connector: connectors/yf_connector.md
   - Exchanges:
-    - IBKR Exchange: doc/exchanges/ibkr_exchange.md
-  - '_______________________': index2.md
+    - IBKR Exchange: exchanges/ibkr_exchange.md
+
   - Backtesting:
-    - Base Class: doc/engine/base_class.md
-    - Cost Model: doc/engine/cost_model.md
-    - Data Manager: doc/engine/data_manager.md
-    - Execution Manager: doc/engine/execution_manager.md
-    - Forecast Engine: doc/engine/forecast_engine.md
-    - Market Regime: doc/engine/market_regime.md
-    - Market Regime with ML: doc/engine/market_regime_with_ml.md
-    - Monte Carlo Analyzer: doc/engine/monte_carlo_analyzer.md
-    - Performance Analytics: doc/engine/performance_analytics.md
-    - Performance Reporting: doc/engine/performance_reporting.md
-    - Portfolio Construction: doc/engine/portfolio_construction.md
-    - Portfolio Optimizer: doc/engine/portfolio_optimizer.md
-    - Profit/Loss Tracker: doc/engine/profitloss_tracker.md
-    - Risk Management: doc/engine/risk_management.md
-    - Signal Generator: doc/engine/signal_generator.md
-    - Transaction Cost Analysis: doc/engine/transaction_cost_analysis.md
-    - Volatility Engine: doc/engine/volatility_engine.md
+    - Base Class: engine/base_class.md
+    - Cost Model: engine/cost_model.md
+    - Data Manager: engine/data_manager.md
+    - Execution Manager: engine/execution_manager.md
+    - Forecast Engine: engine/forecast_engine.md
+    - Market Regime: engine/market_regime.md
+    - Market Regime with ML: engine/market_regime_with_ml.md
+    - Monte Carlo Analyzer: engine/monte_carlo_analyzer.md
+    - Performance Analytics: engine/performance_analytics.md
+    - Performance Reporting: engine/performance_reporting.md
+    - Portfolio Construction: engine/portfolio_construction.md
+    - Portfolio Optimizer: engine/portfolio_optimizer.md
+    - Profit/Loss Tracker: engine/profitloss_tracker.md
+    - Risk Management: engine/risk_management.md
+    - Signal Generator: engine/signal_generator.md
+    - Transaction Cost Analysis: engine/transaction_cost_analysis.md
+    - Volatility Engine: engine/volatility_engine.md
   - Portfolio:
     - Portfolio: portfolio/portfolio.md
 - Strategies:
@@ -80,5 +79,5 @@ nav:
   - Substack Blog: tutorials/tutorials.md
 - Videos: videos.md
 
-  # Your extra settings
+# Your extra settings
 copyright: "&copy; 2024 <a href='https://quantjourney.substack.com' target='_blank'>jpolec</a>"
