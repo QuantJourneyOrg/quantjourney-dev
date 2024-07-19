@@ -3,19 +3,82 @@ site_description: "QuantJourney with Code is a blog about quantitative finance, 
 site_author: Jakub Polec
 site_url: https://quantjourney.dev/
 
-logo: logo_small_with_text_transparent.png
+#logo: logo_small_with_text_transparent.png
 theme:
   name: material
-  logo: images/logo_small_with_text_transparent.png
-  # other theme settings...
+
 nav:
-  # Your navigation structure
-markdown_extensions:
-  # Your markdown extensions
-extra_css:
-  # Your extra CSS
-extra_javascript:
-  # Your extra JavaScript
-extra:
+- Home:
+  - Overview: index.md
+  - Start: doc/documentation.md
+  - Strategies: strat/strategies.md
+  - Backtesting: tutorials/backtesting-general.md
+  - Videos: videos.md
+- Documentation:
+  - Overview:
+    - Start: doc/documentation.md
+    - Repository Installation: doc/repo.md
+    - DataBase Installation: doc/installation.md
+  - '_______________________': index1.md
+  - Data Utils:
+    - Data Manager: doc/utils/data_manager.md
+    - Data Connector: doc/utils/data_connector.md
+  - Assets:
+    - Indices: doc/assets/indices.md
+    - Crypto: doc/assets/crypto.md
+    - Equities: doc/assets/equities.md
+    - ETFs: doc/assets/etfs.md
+    - Forex: doc/assets/forex.md
+    - Futures: doc/assets/futures.md
+    - Macro: doc/assets/macro.md
+    - Bonds: doc/assets/bonds.md
+    - Commodities: doc/assets/commodities.md
+    - REITs: doc/assets/reits.md
+  - Connectors:
+    - CCXT Connector: doc/connectors/ccxt_connector.md
+    - EOD Connector: doc/connectors/eod_connector.md
+    - FMP Connector: doc/connectors/fmp_connector.md
+    - CNNFG Connector: doc/connectors/cnnfg_connector.md
+    - FRED Connector: doc/connectors/fred_connector.md
+    - Oanda Connector: doc/connectors/oanda_connector.md
+    - Quandl Connector: doc/connectors/quandl_connector.md
+    - SEC Connector: doc/connectors/sec_connector.md
+    - Yahoo Finance Connector: doc/connectors/yf_connector.md
+  - Exchanges:
+    - IBKR Exchange: doc/exchanges/ibkr_exchange.md
+  - '_______________________': index2.md
+  - Backtesting:
+    - Base Class: doc/engine/base_class.md
+    - Cost Model: doc/engine/cost_model.md
+    - Data Manager: doc/engine/data_manager.md
+    - Execution Manager: doc/engine/execution_manager.md
+    - Forecast Engine: doc/engine/forecast_engine.md
+    - Market Regime: doc/engine/market_regime.md
+    - Market Regime with ML: doc/engine/market_regime_with_ml.md
+    - Monte Carlo Analyzer: doc/engine/monte_carlo_analyzer.md
+    - Performance Analytics: doc/engine/performance_analytics.md
+    - Performance Reporting: doc/engine/performance_reporting.md
+    - Portfolio Construction: doc/engine/portfolio_construction.md
+    - Portfolio Optimizer: doc/engine/portfolio_optimizer.md
+    - Profit/Loss Tracker: doc/engine/profitloss_tracker.md
+    - Risk Management: doc/engine/risk_management.md
+    - Signal Generator: doc/engine/signal_generator.md
+    - Transaction Cost Analysis: doc/engine/transaction_cost_analysis.md
+    - Volatility Engine: doc/engine/volatility_engine.md
+  - Portfolio:
+    - Portfolio: portfolio/portfolio.md
+- Strategies:
+  - Overview: strat/strategies.md
+  - Statistical Arbitrage: strat/statistical_arbitrage/overview.md
+  - Momentum Investing: strat/statistical_arbitrage/momentum_investing.md
+  - Mean Reversion: strat/statistical_arbitrage/mean_reversion.md
+  - Machine Learning Techniques: strat/statistical_arbitrage/machine_learning.md
+  - High-Frequency Trading (HFT): strat/statistical_arbitrage/hft.md
+  - Factor Investing: strat/statistical_arbitrage/factor_investing.md
+  - Event-Driven Strategies: strat/statistical_arbitrage/event_driven.md
+- Tutorials:
+  - Substack Blog: tutorials/tutorials.md
+- Videos: videos.md
+
   # Your extra settings
 copyright: "&copy; 2024 <a href='https://quantjourney.substack.com' target='_blank'>jpolec</a>"
