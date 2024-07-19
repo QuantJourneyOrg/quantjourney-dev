@@ -1,0 +1,21 @@
+site_name: QuantJourney with Code (Dev)
+site_description: "QuantJourney with Code is a blog about quantitative finance, data science, and programming."
+site_author: Jakub Polec
+site_url: https://quantjourney.dev/
+
+logo: logo_small_with_text_transparent.png
+theme:
+  name: material
+  logo: images/logo_small_with_text_transparent.png
+  # other theme settings...
+nav:
+  # Your navigation structure
+markdown_extensions:
+  # Your markdown extensions
+extra_css:
+  # Your extra CSS
+extra_javascript:
+  # Your extra JavaScript
+extra:
+  # Your extra settings
+copyright: "&copy; 2024 <a href='https://quantjourney.substack.com' target='_blank'>jpolec</a>"
