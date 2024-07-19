@@ -1,277 +1,277 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-         <loc>https://quantjourney.dev/</loc>
+         <loc>https://quantjourneyorg.github.io/quantjourney-dev/</loc>
          <lastmod>2024-07-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://quantjourney.dev/backtesting/</loc>
+         <loc>https://quantjourneyorg.github.io/quantjourney-dev/backtesting/</loc>
          <lastmod>2024-07-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://quantjourney.dev/documentation/</loc>
+         <loc>https://quantjourneyorg.github.io/quantjourney-dev/documentation/</loc>
          <lastmod>2024-07-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://quantjourney.dev/installation/</loc>
+         <loc>https://quantjourneyorg.github.io/quantjourney-dev/installation/</loc>
          <lastmod>2024-07-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://quantjourney.dev/repo/</loc>
+         <loc>https://quantjourneyorg.github.io/quantjourney-dev/repo/</loc>
          <lastmod>2024-07-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://quantjourney.dev/videos/</loc>
+         <loc>https://quantjourneyorg.github.io/quantjourney-dev/videos/</loc>
          <lastmod>2024-07-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://quantjourney.dev/assets/bonds/</loc>
+         <loc>https://quantjourneyorg.github.io/quantjourney-dev/assets/bonds/</loc>
          <lastmod>2024-07-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://quantjourney.dev/assets/commodities/</loc>
+         <loc>https://quantjourneyorg.github.io/quantjourney-dev/assets/commodities/</loc>
          <lastmod>2024-07-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://quantjourney.dev/assets/crypto/</loc>
+         <loc>https://quantjourneyorg.github.io/quantjourney-dev/assets/crypto/</loc>
          <lastmod>2024-07-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://quantjourney.dev/assets/equities/</loc>
+         <loc>https://quantjourneyorg.github.io/quantjourney-dev/assets/equities/</loc>
          <lastmod>2024-07-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://quantjourney.dev/assets/etfs/</loc>
+         <loc>https://quantjourneyorg.github.io/quantjourney-dev/assets/etfs/</loc>
          <lastmod>2024-07-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://quantjourney.dev/assets/forex/</loc>
+         <loc>https://quantjourneyorg.github.io/quantjourney-dev/assets/forex/</loc>
          <lastmod>2024-07-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://quantjourney.dev/assets/futures/</loc>
+         <loc>https://quantjourneyorg.github.io/quantjourney-dev/assets/futures/</loc>
          <lastmod>2024-07-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://quantjourney.dev/assets/indices/</loc>
+         <loc>https://quantjourneyorg.github.io/quantjourney-dev/assets/indices/</loc>
          <lastmod>2024-07-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://quantjourney.dev/assets/macro/</loc>
+         <loc>https://quantjourneyorg.github.io/quantjourney-dev/assets/macro/</loc>
          <lastmod>2024-07-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://quantjourney.dev/assets/reits/</loc>
+         <loc>https://quantjourneyorg.github.io/quantjourney-dev/assets/reits/</loc>
          <lastmod>2024-07-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://quantjourney.dev/connectors/ccxt_connector/</loc>
+         <loc>https://quantjourneyorg.github.io/quantjourney-dev/connectors/ccxt_connector/</loc>
          <lastmod>2024-07-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://quantjourney.dev/connectors/cnnfg_connector/</loc>
+         <loc>https://quantjourneyorg.github.io/quantjourney-dev/connectors/cnnfg_connector/</loc>
          <lastmod>2024-07-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://quantjourney.dev/connectors/eod_connector/</loc>
+         <loc>https://quantjourneyorg.github.io/quantjourney-dev/connectors/eod_connector/</loc>
          <lastmod>2024-07-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://quantjourney.dev/connectors/fmp_connector/</loc>
+         <loc>https://quantjourneyorg.github.io/quantjourney-dev/connectors/fmp_connector/</loc>
          <lastmod>2024-07-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://quantjourney.dev/connectors/fred_connector/</loc>
+         <loc>https://quantjourneyorg.github.io/quantjourney-dev/connectors/fred_connector/</loc>
          <lastmod>2024-07-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://quantjourney.dev/connectors/oanda_connector/</loc>
+         <loc>https://quantjourneyorg.github.io/quantjourney-dev/connectors/oanda_connector/</loc>
          <lastmod>2024-07-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://quantjourney.dev/connectors/quandl_connector/</loc>
+         <loc>https://quantjourneyorg.github.io/quantjourney-dev/connectors/quandl_connector/</loc>
          <lastmod>2024-07-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://quantjourney.dev/connectors/sec_connector/</loc>
+         <loc>https://quantjourneyorg.github.io/quantjourney-dev/connectors/sec_connector/</loc>
          <lastmod>2024-07-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://quantjourney.dev/connectors/yf_connector/</loc>
+         <loc>https://quantjourneyorg.github.io/quantjourney-dev/connectors/yf_connector/</loc>
          <lastmod>2024-07-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://quantjourney.dev/engine/base_class/</loc>
+         <loc>https://quantjourneyorg.github.io/quantjourney-dev/engine/base_class/</loc>
          <lastmod>2024-07-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://quantjourney.dev/engine/cost_model/</loc>
+         <loc>https://quantjourneyorg.github.io/quantjourney-dev/engine/cost_model/</loc>
          <lastmod>2024-07-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://quantjourney.dev/engine/data_manager/</loc>
+         <loc>https://quantjourneyorg.github.io/quantjourney-dev/engine/data_manager/</loc>
          <lastmod>2024-07-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://quantjourney.dev/engine/execution_manager/</loc>
+         <loc>https://quantjourneyorg.github.io/quantjourney-dev/engine/execution_manager/</loc>
          <lastmod>2024-07-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://quantjourney.dev/engine/forecast_engine/</loc>
+         <loc>https://quantjourneyorg.github.io/quantjourney-dev/engine/forecast_engine/</loc>
          <lastmod>2024-07-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://quantjourney.dev/engine/market_regime/</loc>
+         <loc>https://quantjourneyorg.github.io/quantjourney-dev/engine/market_regime/</loc>
          <lastmod>2024-07-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://quantjourney.dev/engine/market_regime_with_ml/</loc>
+         <loc>https://quantjourneyorg.github.io/quantjourney-dev/engine/market_regime_with_ml/</loc>
          <lastmod>2024-07-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://quantjourney.dev/engine/monte_carlo_analyzer/</loc>
+         <loc>https://quantjourneyorg.github.io/quantjourney-dev/engine/monte_carlo_analyzer/</loc>
          <lastmod>2024-07-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://quantjourney.dev/engine/performance_analytics/</loc>
+         <loc>https://quantjourneyorg.github.io/quantjourney-dev/engine/performance_analytics/</loc>
          <lastmod>2024-07-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://quantjourney.dev/engine/performance_reporting/</loc>
+         <loc>https://quantjourneyorg.github.io/quantjourney-dev/engine/performance_reporting/</loc>
          <lastmod>2024-07-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://quantjourney.dev/engine/portfolio_construction/</loc>
+         <loc>https://quantjourneyorg.github.io/quantjourney-dev/engine/portfolio_construction/</loc>
          <lastmod>2024-07-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://quantjourney.dev/engine/portfolio_optimizer/</loc>
+         <loc>https://quantjourneyorg.github.io/quantjourney-dev/engine/portfolio_optimizer/</loc>
          <lastmod>2024-07-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://quantjourney.dev/engine/profitloss_tracker/</loc>
+         <loc>https://quantjourneyorg.github.io/quantjourney-dev/engine/profitloss_tracker/</loc>
          <lastmod>2024-07-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://quantjourney.dev/engine/risk_management/</loc>
+         <loc>https://quantjourneyorg.github.io/quantjourney-dev/engine/risk_management/</loc>
          <lastmod>2024-07-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://quantjourney.dev/engine/signal_generator/</loc>
+         <loc>https://quantjourneyorg.github.io/quantjourney-dev/engine/signal_generator/</loc>
          <lastmod>2024-07-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://quantjourney.dev/engine/transaction_cost_analysis/</loc>
+         <loc>https://quantjourneyorg.github.io/quantjourney-dev/engine/transaction_cost_analysis/</loc>
          <lastmod>2024-07-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://quantjourney.dev/engine/volatility_engine/</loc>
+         <loc>https://quantjourneyorg.github.io/quantjourney-dev/engine/volatility_engine/</loc>
          <lastmod>2024-07-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://quantjourney.dev/exchanges/ibkr_exchange/</loc>
+         <loc>https://quantjourneyorg.github.io/quantjourney-dev/exchanges/ibkr_exchange/</loc>
          <lastmod>2024-07-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://quantjourney.dev/strat/strategies/</loc>
+         <loc>https://quantjourneyorg.github.io/quantjourney-dev/strat/strategies/</loc>
          <lastmod>2024-07-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://quantjourney.dev/strat/statistical_arbitrage/event_driven/</loc>
+         <loc>https://quantjourneyorg.github.io/quantjourney-dev/strat/statistical_arbitrage/event_driven/</loc>
          <lastmod>2024-07-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://quantjourney.dev/strat/statistical_arbitrage/factor_investing/</loc>
+         <loc>https://quantjourneyorg.github.io/quantjourney-dev/strat/statistical_arbitrage/factor_investing/</loc>
          <lastmod>2024-07-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://quantjourney.dev/strat/statistical_arbitrage/hft/</loc>
+         <loc>https://quantjourneyorg.github.io/quantjourney-dev/strat/statistical_arbitrage/hft/</loc>
          <lastmod>2024-07-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://quantjourney.dev/strat/statistical_arbitrage/machine_learning/</loc>
+         <loc>https://quantjourneyorg.github.io/quantjourney-dev/strat/statistical_arbitrage/machine_learning/</loc>
          <lastmod>2024-07-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://quantjourney.dev/strat/statistical_arbitrage/mean_reversion/</loc>
+         <loc>https://quantjourneyorg.github.io/quantjourney-dev/strat/statistical_arbitrage/mean_reversion/</loc>
          <lastmod>2024-07-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://quantjourney.dev/strat/statistical_arbitrage/momentum_investing/</loc>
+         <loc>https://quantjourneyorg.github.io/quantjourney-dev/strat/statistical_arbitrage/momentum_investing/</loc>
          <lastmod>2024-07-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://quantjourney.dev/strat/statistical_arbitrage/overview/</loc>
+         <loc>https://quantjourneyorg.github.io/quantjourney-dev/strat/statistical_arbitrage/overview/</loc>
          <lastmod>2024-07-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://quantjourney.dev/tutorials/backtesting-general/</loc>
+         <loc>https://quantjourneyorg.github.io/quantjourney-dev/tutorials/backtesting-general/</loc>
          <lastmod>2024-07-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://quantjourney.dev/tutorials/tutorials/</loc>
+         <loc>https://quantjourneyorg.github.io/quantjourney-dev/tutorials/tutorials/</loc>
          <lastmod>2024-07-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://quantjourney.dev/utils/data_connector/</loc>
+         <loc>https://quantjourneyorg.github.io/quantjourney-dev/utils/data_connector/</loc>
          <lastmod>2024-07-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://quantjourney.dev/utils/data_manager/</loc>
+         <loc>https://quantjourneyorg.github.io/quantjourney-dev/utils/data_manager/</loc>
          <lastmod>2024-07-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
