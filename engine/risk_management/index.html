@@ -1,0 +1,3417 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="QuantJourney with Code is a blog about quantitative finance, data science, and programming.">
+      
+      
+        <meta name="author" content="Jakub Polec">
+      
+      
+        <link rel="canonical" href="http://quantjourney.dev/engine/risk_management/">
+      
+      
+        <link rel="prev" href="../profitloss_tracker/">
+      
+      
+        <link rel="next" href="../signal_generator/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.28">
+    
+    
+      
+        <title>Risk Management - QuantJourney with Code (Dev)</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.6543a935.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#module-information" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="QuantJourney with Code (Dev)" class="md-header__button md-logo" aria-label="QuantJourney with Code (Dev)" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            QuantJourney with Code (Dev)
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Risk Management
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="QuantJourney with Code (Dev)" class="md-nav__button md-logo" aria-label="QuantJourney with Code (Dev)" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    QuantJourney with Code (Dev)
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            Home
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../documentation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Start
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../strat/strategies/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Strategies
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../backtesting/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Backtesting
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../videos/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Videos
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Documentation
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Documentation
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            Overview
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../documentation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Start
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../repo/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Repository Installation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../installation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    DataBase Installation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Data Utils
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            Data Utils
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../utils/data_manager/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Data Manager
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../utils/data_connector/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Data Connector
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Assets
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            Assets
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../assets/indices/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Indices
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../assets/crypto/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Crypto
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../assets/equities/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Equities
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../assets/etfs/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ETFs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../assets/forex/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Forex
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../assets/futures/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Futures
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../assets/macro/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Macro
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../assets/bonds/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Bonds
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../assets/commodities/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Commodities
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../assets/reits/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    REITs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_4" id="__nav_2_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Connectors
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4">
+            <span class="md-nav__icon md-icon"></span>
+            Connectors
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../connectors/ccxt_connector/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CCXT Connector
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../connectors/eod_connector/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    EOD Connector
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../connectors/fmp_connector/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    FMP Connector
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../connectors/cnnfg_connector/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CNNFG Connector
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../connectors/fred_connector/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    FRED Connector
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../connectors/oanda_connector/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Oanda Connector
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../connectors/quandl_connector/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Quandl Connector
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../connectors/sec_connector/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    SEC Connector
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../connectors/yf_connector/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Yahoo Finance Connector
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_5" id="__nav_2_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Exchanges
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_5">
+            <span class="md-nav__icon md-icon"></span>
+            Exchanges
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../exchanges/ibkr_exchange/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    IBKR Exchange
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_6" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2_6" id="__nav_2_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Backtesting
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_6_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_6">
+            <span class="md-nav__icon md-icon"></span>
+            Backtesting
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../base_class/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Base Class
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cost_model/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Cost Model
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../data_manager/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Data Manager
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../execution_manager/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Execution Manager
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../forecast_engine/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Forecast Engine
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../market_regime/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Market Regime
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../market_regime_with_ml/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Market Regime with ML
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../monte_carlo_analyzer/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Monte Carlo Analyzer
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../performance_analytics/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Performance Analytics
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../performance_reporting/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Performance Reporting
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../portfolio_construction/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Portfolio Construction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../portfolio_optimizer/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Portfolio Optimizer
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../profitloss_tracker/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Profit/Loss Tracker
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Risk Management
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Risk Management
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#class-riskmanagement" class="md-nav__link">
+    <span class="md-ellipsis">
+      Class: RiskManagement
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Class: RiskManagement">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#method-init" class="md-nav__link">
+    <span class="md-ellipsis">
+      Method: init
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#method-load_risk_params" class="md-nav__link">
+    <span class="md-ellipsis">
+      Method: load_risk_params
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#method-set_portfolio" class="md-nav__link">
+    <span class="md-ellipsis">
+      Method: set_portfolio
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#method-set_pnl_tracker" class="md-nav__link">
+    <span class="md-ellipsis">
+      Method: set_pnl_tracker
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#method-assess_risk_management" class="md-nav__link">
+    <span class="md-ellipsis">
+      Method: assess_risk_management
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#method-calculate_new_holding_size" class="md-nav__link">
+    <span class="md-ellipsis">
+      Method: calculate_new_holding_size
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#method-adjust_transactions_with_risk_profiles" class="md-nav__link">
+    <span class="md-ellipsis">
+      Method: adjust_transactions_with_risk_profiles
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#method-calculate_instrument_volatility" class="md-nav__link">
+    <span class="md-ellipsis">
+      Method: calculate_instrument_volatility
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#method-calculate_potential_loss" class="md-nav__link">
+    <span class="md-ellipsis">
+      Method: calculate_potential_loss
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#method-calculate_new_drawdown" class="md-nav__link">
+    <span class="md-ellipsis">
+      Method: calculate_new_drawdown
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#method-calculate_liquidity_risk" class="md-nav__link">
+    <span class="md-ellipsis">
+      Method: calculate_liquidity_risk
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#method-calculate_sector_exposure" class="md-nav__link">
+    <span class="md-ellipsis">
+      Method: calculate_sector_exposure
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#method-calculate_portfolio_risk" class="md-nav__link">
+    <span class="md-ellipsis">
+      Method: calculate_portfolio_risk
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#method-check_portfolio_risk" class="md-nav__link">
+    <span class="md-ellipsis">
+      Method: check_portfolio_risk
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#method-calculate_pnl" class="md-nav__link">
+    <span class="md-ellipsis">
+      Method: calculate_pnl
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#method-calculate_kelly_criterion_position_size" class="md-nav__link">
+    <span class="md-ellipsis">
+      Method: calculate_kelly_criterion_position_size
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#method-update_portfolio_metrics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Method: update_portfolio_metrics
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#method-manage_risk" class="md-nav__link">
+    <span class="md-ellipsis">
+      Method: manage_risk
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#method-calculate_order_risk" class="md-nav__link">
+    <span class="md-ellipsis">
+      Method: calculate_order_risk
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#method-calculate_value_at_risk" class="md-nav__link">
+    <span class="md-ellipsis">
+      Method: calculate_value_at_risk
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#method-calculate_expected_shortfall" class="md-nav__link">
+    <span class="md-ellipsis">
+      Method: calculate_expected_shortfall
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#class-unittests" class="md-nav__link">
+    <span class="md-ellipsis">
+      Class: UnitTests
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Class: UnitTests">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#method-run_unit_test" class="md-nav__link">
+    <span class="md-ellipsis">
+      Method: run_unit_test
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../signal_generator/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Signal Generator
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../transaction_cost_analysis/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Transaction Cost Analysis
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../volatility_engine/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Volatility Engine
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_7" id="__nav_2_7_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Portfolio
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_7">
+            <span class="md-nav__icon md-icon"></span>
+            Portfolio
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../portfolio/portfolio.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Portfolio
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Strategies
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Strategies
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../strat/strategies/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Strategies
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../strat/statistical_arbitrage/overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Statistical Arbitrage
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../strat/statistical_arbitrage/momentum_investing/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Momentum Investing
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../strat/statistical_arbitrage/mean_reversion/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Mean Reversion
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../strat/statistical_arbitrage/machine_learning/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Machine Learning Techniques
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../strat/statistical_arbitrage/hft/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    High-Frequency Trading (HFT)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../strat/statistical_arbitrage/factor_investing/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Factor Investing
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../strat/statistical_arbitrage/event_driven/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Event-Driven Strategies
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Tutorials
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Tutorials
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorials/tutorials/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Substack Blog
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../videos/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Videos
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#class-riskmanagement" class="md-nav__link">
+    <span class="md-ellipsis">
+      Class: RiskManagement
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Class: RiskManagement">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#method-init" class="md-nav__link">
+    <span class="md-ellipsis">
+      Method: init
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#method-load_risk_params" class="md-nav__link">
+    <span class="md-ellipsis">
+      Method: load_risk_params
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#method-set_portfolio" class="md-nav__link">
+    <span class="md-ellipsis">
+      Method: set_portfolio
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#method-set_pnl_tracker" class="md-nav__link">
+    <span class="md-ellipsis">
+      Method: set_pnl_tracker
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#method-assess_risk_management" class="md-nav__link">
+    <span class="md-ellipsis">
+      Method: assess_risk_management
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#method-calculate_new_holding_size" class="md-nav__link">
+    <span class="md-ellipsis">
+      Method: calculate_new_holding_size
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#method-adjust_transactions_with_risk_profiles" class="md-nav__link">
+    <span class="md-ellipsis">
+      Method: adjust_transactions_with_risk_profiles
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#method-calculate_instrument_volatility" class="md-nav__link">
+    <span class="md-ellipsis">
+      Method: calculate_instrument_volatility
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#method-calculate_potential_loss" class="md-nav__link">
+    <span class="md-ellipsis">
+      Method: calculate_potential_loss
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#method-calculate_new_drawdown" class="md-nav__link">
+    <span class="md-ellipsis">
+      Method: calculate_new_drawdown
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#method-calculate_liquidity_risk" class="md-nav__link">
+    <span class="md-ellipsis">
+      Method: calculate_liquidity_risk
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#method-calculate_sector_exposure" class="md-nav__link">
+    <span class="md-ellipsis">
+      Method: calculate_sector_exposure
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#method-calculate_portfolio_risk" class="md-nav__link">
+    <span class="md-ellipsis">
+      Method: calculate_portfolio_risk
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#method-check_portfolio_risk" class="md-nav__link">
+    <span class="md-ellipsis">
+      Method: check_portfolio_risk
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#method-calculate_pnl" class="md-nav__link">
+    <span class="md-ellipsis">
+      Method: calculate_pnl
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#method-calculate_kelly_criterion_position_size" class="md-nav__link">
+    <span class="md-ellipsis">
+      Method: calculate_kelly_criterion_position_size
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#method-update_portfolio_metrics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Method: update_portfolio_metrics
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#method-manage_risk" class="md-nav__link">
+    <span class="md-ellipsis">
+      Method: manage_risk
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#method-calculate_order_risk" class="md-nav__link">
+    <span class="md-ellipsis">
+      Method: calculate_order_risk
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#method-calculate_value_at_risk" class="md-nav__link">
+    <span class="md-ellipsis">
+      Method: calculate_value_at_risk
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#method-calculate_expected_shortfall" class="md-nav__link">
+    <span class="md-ellipsis">
+      Method: calculate_expected_shortfall
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#class-unittests" class="md-nav__link">
+    <span class="md-ellipsis">
+      Class: UnitTests
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Class: UnitTests">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#method-run_unit_test" class="md-nav__link">
+    <span class="md-ellipsis">
+      Method: run_unit_test
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="module-information">Module Information</h1>
+<p><strong>Description:</strong>
+Backtesting Framework for Trading Strategies</p>
+<pre><code>RiskManagment - Class for managing risk in trading strategies.
+
+Functions:
+    - manage_portfolio_risk: Perform portfolio-level risk management and diversification analysis.
+    - manage_instrument_risk: Apply risk management rules to the given orders based on portfolio-level risk and configuration settings.
+    - check_risk_limits: Checks whether a given order for an instrument complies with risk limits.
+    - calculate_portfolio_risk: Calculate the portfolio-level risk metric based on the proposed orders.
+    - calculate_instrument_volatility: Calculate the volatility of an instrument.
+    - calculate_portfolio_volatility: Calculate the portfolio-level volatility based on instrument volatilities.
+    - get_historical_returns: Retrieve historical returns for the specified instrument.
+</code></pre>
+<p><strong>Author:</strong> jpolec</p>
+<p><strong>Date:</strong> 27-02-2024 and 01-04-2024</p>
+<h2 id="class-riskmanagement">Class: RiskManagement</h2>
+<h3 id="method-init"><strong>Method: <strong>init</strong></strong></h3>
+<pre><code class="language-python">def __init__(
+    self,
+    config: Dict[str, Any]) -&gt; dict:
+</code></pre>
+<p>Initialize the RiskManagement with the specified configuration.</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>config</code></td>
+<td><code>Dict[str, Any]</code></td>
+<td>Configuration options for the RiskManagement.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="method-load_risk_params"><strong>Method: load_risk_params</strong></h3>
+<pre><code class="language-python">def load_risk_params(
+    self,
+    config: Dict[str, Any]) -&gt; pd.DataFrame: &quot;&quot;&quot; Create DataFrame from nested dictionaries with correct indices and handling Args: config (Dict[str, Any]) -&gt; dict:
+</code></pre>
+<p>Create DataFrame from nested dictionaries with correct indices and handling</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>config</code></td>
+<td><code>Dict[str, Any]</code></td>
+<td>The configuration dictionary with risk parameters.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="method-set_portfolio"><strong>Method: set_portfolio</strong></h3>
+<pre><code class="language-python">def set_portfolio(
+    self,
+    portfolio: PortfolioOptimizer) -&gt; dict:
+</code></pre>
+<p>Register the PortfolioOptimizer instance for the risk management calculations.</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>portfolio</code></td>
+<td><code>PortfolioOptimizer</code></td>
+<td>The PortfolioOptimizer instance.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="method-set_pnl_tracker"><strong>Method: set_pnl_tracker</strong></h3>
+<pre><code class="language-python">def set_pnl_tracker(
+    self,
+    pnl_tracker: ProfitLossTracker) -&gt; dict:
+</code></pre>
+<p>Register the ProfitLossTracker instance for the risk management calculations.add()</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>pnl_tracker</code></td>
+<td><code>ProfitLossTracker</code></td>
+<td>The ProfitLossTracker instance.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>None</code></td>
+<td>None</td>
+</tr>
+</tbody>
+</table>
+<h3 id="method-assess_risk_management"><strong>Method: assess_risk_management</strong></h3>
+<pre><code class="language-python">def assess_risk_management(
+    self,
+    market_regime: str,
+    current_date: pd.Timestamp) -&gt; dict:
+</code></pre>
+<p>Assess the risk management strategies based on the identified market regime and current date.</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>market_regime</code></td>
+<td><code>str</code></td>
+<td>The identified market regime ('bull', 'bear', or 'sideways').</td>
+</tr>
+<tr>
+<td><code>current_date</code></td>
+<td><code>pd.Timestamp</code></td>
+<td>The current date for which to adapt the risk management strategies.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="method-calculate_new_holding_size"><strong>Method: calculate_new_holding_size</strong></h3>
+<pre><code class="language-python">def calculate_new_holding_size(
+    self,
+    strategy: str,
+    instrument: str,
+    signal: int,
+    market_data: pd.DataFrame,
+    current_market_regime: str,
+    ) -&gt; dict:
+</code></pre>
+<p>Calculate new holding size for a given instrument and strategy based on risk management rules.</p>
+<pre><code>Explanation:
+</code></pre>
+<ol>
+<li>
+<p>risk per trade - calculate the risk per trade based on the account size and the risk percentage.</p>
+</li>
+<li>
+<p>instrument volatility - calculate the instrument volatility based on the ATR value.</p>
+</li>
+<li>
+<p>position size - calculate the position size based on the risk per trade and the instrument volatility.</p>
+</li>
+<li>
+<p>position change - check if the position change is below the inertia threshold.</p>
+</li>
+<li>
+<p>max quantity - calculate the maximum quantity based on the available cash.</p>
+</li>
+<li>
+<p>target position size - adjust the position size based on the signal and available cash/quantity.</p>
+</li>
+</ol>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>strategy</code></td>
+<td><code>str</code></td>
+<td>The strategy name.</td>
+</tr>
+<tr>
+<td><code>instrument</code></td>
+<td><code>str</code></td>
+<td>The instrument symbol.</td>
+</tr>
+<tr>
+<td><code>signal</code></td>
+<td><code>int</code></td>
+<td>The signal for the instrument (1 for buy, -1 for sell).</td>
+</tr>
+<tr>
+<td><code>market_data</code></td>
+<td><code>pd.DataFrame</code></td>
+<td>The historical market data for the instrument.</td>
+</tr>
+<tr>
+<td><code>current_market_regime</code></td>
+<td><code>str</code></td>
+<td>The current market regime.</td>
+</tr>
+<tr>
+<td><code>|</code></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>float</code></td>
+<td>The calculated position size.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="method-adjust_transactions_with_risk_profiles"><strong>Method: adjust_transactions_with_risk_profiles</strong></h3>
+<pre><code class="language-python">def adjust_transactions_with_risk_profiles(
+    self,
+    daily_transactions_dict,
+    market_data,
+    current_market_regime) -&gt; dict:
+</code></pre>
+<p>Optimize the transactions based on the risk management rules and market regime.</p>
+<pre><code>It is checking:
+</code></pre>
+<ol>
+<li>
+<p>Stop-loss level (stop_loss_level) if the potential loss exceeds the stop-loss level.</p>
+<p>It works both for 'buy' and 'sell' orders by adjusting the order quantity.</p>
+</li>
+<li>
+<p>Volatility scaling (volatility_scaling) to adjust the order quantity based on the instrument volatility.</p>
+</li>
+<li>
+<p>Leverage ratio (leverage_ratio) to apply leverage to the order quantity.</p>
+</li>
+<li>
+<p>Maximum positions (max_positions) to limit the number of positions in the portfolio.</p>
+</li>
+<li>
+<p>Risk percentage (risk_percentage) to limit the risk per trade based on the account size.</p>
+</li>
+<li>
+<p>Maximum drawdown (max_drawdown) to limit the drawdown based on the new portfolio value.</p>
+</li>
+<li>
+<p>Maximum risk percentage (max_risk_percentage) to limit the risk based on the portfolio value.</p>
+</li>
+<li>
+<p>Liquidity risk (max_liquidity_risk) to limit the order quantity based on the average volume.</p>
+</li>
+<li>
+<p>Sector exposure (max_sector_exposure) to limit the sector exposure based on the portfolio value.</p>
+</li>
+</ol>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>daily_transactions_dict</code></td>
+<td><code>Dict[str, List[Dict[str, Any]]]</code></td>
+<td>A dictionary containing lists of transactions, grouped by strategy.</td>
+</tr>
+<tr>
+<td><code>market_data</code></td>
+<td><code>Dict[str, pd.DataFrame]</code></td>
+<td>The market data for each instrument.</td>
+</tr>
+<tr>
+<td><code>current_market_regime</code></td>
+<td><code>str</code></td>
+<td>The current market regime.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Dict[str, List[Dict[str, Any]]]</code></td>
+<td>A dictionary containing the adjusted lists of transactions, grouped by strategy.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="method-calculate_instrument_volatility"><strong>Method: calculate_instrument_volatility</strong></h3>
+<pre><code class="language-python">def calculate_instrument_volatility(
+    self,
+    instrument: str,
+    market_data: pd.DataFrame) -&gt; dict:
+</code></pre>
+<p>Calculate the volatility of an instrument based on historical data.</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>instrument</code></td>
+<td><code>str</code></td>
+<td>The instrument symbol.</td>
+</tr>
+<tr>
+<td><code>market_data</code></td>
+<td><code>pd.DataFrame</code></td>
+<td>The market data for the instrument.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>float</code></td>
+<td>The calculated instrument volatility.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="method-calculate_potential_loss"><strong>Method: calculate_potential_loss</strong></h3>
+<pre><code class="language-python">def calculate_potential_loss(
+    self,
+    instrument: str,
+    quantity: float,
+    instrument_data: pd.DataFrame,
+    current_market_regime: str) -&gt; dict:
+</code></pre>
+<p>Calculate the potential loss for a given instrument and quantity based on the market data.</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>instrument</code></td>
+<td><code>str</code></td>
+<td>The instrument symbol.</td>
+</tr>
+<tr>
+<td><code>quantity</code></td>
+<td><code>float</code></td>
+<td>The order quantity.</td>
+</tr>
+<tr>
+<td><code>instrument_data</code></td>
+<td><code>pd.DataFrame</code></td>
+<td>The market data for the instrument.</td>
+</tr>
+<tr>
+<td><code>current_market_regime</code></td>
+<td><code>str</code></td>
+<td>The current market regime.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>float</code></td>
+<td>The potential loss.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="method-calculate_new_drawdown"><strong>Method: calculate_new_drawdown</strong></h3>
+<pre><code class="language-python">def calculate_new_drawdown(
+    self,
+    instrument: str,
+    quantity: float,
+    market_data: Dict[str, pd.DataFrame]) -&gt; dict:
+</code></pre>
+<p>Calculate the new drawdown for a given instrument and quantity based on the market data.</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>instrument</code></td>
+<td><code>str</code></td>
+<td>The instrument symbol.</td>
+</tr>
+<tr>
+<td><code>quantity</code></td>
+<td><code>float</code></td>
+<td>The order quantity.</td>
+</tr>
+<tr>
+<td><code>market_data</code></td>
+<td><code>Dict[str, pd.DataFrame]</code></td>
+<td>The market data for each instrument.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>float</code></td>
+<td>The new drawdown.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="method-calculate_liquidity_risk"><strong>Method: calculate_liquidity_risk</strong></h3>
+<pre><code class="language-python">def calculate_liquidity_risk(
+    self,
+    instrument: str,
+    quantity: float,
+    market_data: Dict[str, pd.DataFrame]) -&gt; dict:
+</code></pre>
+<p>Calculate the liquidity risk for a given instrument and order quantity.</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>instrument</code></td>
+<td><code>str</code></td>
+<td>The instrument symbol.</td>
+</tr>
+<tr>
+<td><code>quantity</code></td>
+<td><code>float</code></td>
+<td>The order quantity.</td>
+</tr>
+<tr>
+<td><code>market_data</code></td>
+<td><code>Dict[str, pd.DataFrame]</code></td>
+<td>The market data for each instrument.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>float</code></td>
+<td>The liquidity risk.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="method-calculate_sector_exposure"><strong>Method: calculate_sector_exposure</strong></h3>
+<pre><code class="language-python">def calculate_sector_exposure(
+    self,
+    instrument: str,
+    quantity: float,
+    market_data: Dict[str, pd.DataFrame]) -&gt; dict:
+</code></pre>
+<p>Calculate the sector exposure for a given instrument and order quantity.</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>instrument</code></td>
+<td><code>str</code></td>
+<td>The instrument symbol.</td>
+</tr>
+<tr>
+<td><code>quantity</code></td>
+<td><code>float</code></td>
+<td>The order quantity.</td>
+</tr>
+<tr>
+<td><code>market_data</code></td>
+<td><code>Dict[str, pd.DataFrame]</code></td>
+<td>The market data for each instrument.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>float</code></td>
+<td>The sector exposure as a percentage of the portfolio value.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="method-calculate_portfolio_risk"><strong>Method: calculate_portfolio_risk</strong></h3>
+<pre><code class="language-python">def calculate_portfolio_risk(
+    self,
+    market_data: Dict[str, pd.DataFrame]) -&gt; dict:
+</code></pre>
+<p>Calculate the portfolio risk based on the current positions and market data.</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>market_data</code></td>
+<td><code>Dict[str, pd.DataFrame]</code></td>
+<td>The market data for each instrument.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>float</code></td>
+<td>The calculated portfolio risk.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="method-check_portfolio_risk"><strong>Method: check_portfolio_risk</strong></h3>
+<pre><code class="language-python">def check_portfolio_risk(
+    self,
+    market_data: Dict[str, pd.DataFrame]) -&gt; dict:
+</code></pre>
+<p>Check if the portfolio risk exceeds the maximum allowed risk.</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>market_data</code></td>
+<td><code>Dict[str, pd.DataFrame]</code></td>
+<td>The market data for each instrument.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>bool</code></td>
+<td>True if the portfolio risk exceeds the maximum allowed risk, False otherwise.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="method-calculate_pnl"><strong>Method: calculate_pnl</strong></h3>
+<pre><code class="language-python">def calculate_pnl(
+    self,
+    market_data: Dict[str, pd.DataFrame]) -&gt; dict:
+</code></pre>
+<p>Calculate the profit and loss (PnL) of the portfolio.</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>market_data</code></td>
+<td><code>Dict[str, pd.DataFrame]</code></td>
+<td>The market data for each instrument.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="method-calculate_kelly_criterion_position_size"><strong>Method: calculate_kelly_criterion_position_size</strong></h3>
+<pre><code class="language-python">def calculate_kelly_criterion_position_size(
+    self,
+    win_probability: float,
+    win_loss_ratio: float) -&gt; dict:
+</code></pre>
+<p>Calculate the optimal position size using the Kelly criterion.</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>win_probability</code></td>
+<td><code>float</code></td>
+<td>The probability of a winning trade.</td>
+</tr>
+<tr>
+<td><code>win_loss_ratio</code></td>
+<td><code>float</code></td>
+<td>The ratio of average win to average loss.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>float</code></td>
+<td>The optimal position size based on the Kelly criterion.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="method-update_portfolio_metrics"><strong>Method: update_portfolio_metrics</strong></h3>
+<pre><code class="language-python">def update_portfolio_metrics(
+    self,
+    market_data: Dict[str, pd.DataFrame]) -&gt; dict:
+</code></pre>
+<p>Update the portfolio metrics based on the current market data.</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>market_data</code></td>
+<td><code>Dict[str, pd.DataFrame]</code></td>
+<td>The market data for each instrument.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="method-manage_risk"><strong>Method: manage_risk</strong></h3>
+<pre><code class="language-python">def manage_risk(
+    self,
+    orders: List[Dict[str, Any]],
+    market_data: Dict[str, pd.DataFrame]) -&gt; List[Dict[str, Any]] -&gt; List[Dict[str, Any]]: &quot;&quot;&quot; Manage the risk of the portfolio based on the orders and market data. Args: orders (List[Dict[str, Any]]) -&gt; dict:
+</code></pre>
+<p>Manage the risk of the portfolio based on the orders and market data.</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>orders</code></td>
+<td><code>List[Dict[str, Any]]</code></td>
+<td>The list of orders.</td>
+</tr>
+<tr>
+<td><code>market_data</code></td>
+<td><code>Dict[str, pd.DataFrame]</code></td>
+<td>The market data for each instrument.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>List[Dict[str, Any]]</code></td>
+<td>The updated list of orders after risk management.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="method-calculate_order_risk"><strong>Method: calculate_order_risk</strong></h3>
+<pre><code class="language-python">def calculate_order_risk(
+    self,
+    instrument: str,
+    quantity: float,
+    market_data: Dict[str, pd.DataFrame]) -&gt; dict:
+</code></pre>
+<p>Calculate the risk of an order.</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>instrument</code></td>
+<td><code>str</code></td>
+<td>The instrument symbol.</td>
+</tr>
+<tr>
+<td><code>quantity</code></td>
+<td><code>float</code></td>
+<td>The order quantity.</td>
+</tr>
+<tr>
+<td><code>market_data</code></td>
+<td><code>Dict[str, pd.DataFrame]</code></td>
+<td>The market data for each instrument.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>float</code></td>
+<td>The calculated order risk.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="method-calculate_value_at_risk"><strong>Method: calculate_value_at_risk</strong></h3>
+<pre><code class="language-python">def calculate_value_at_risk(
+    self,
+    instrument_data: pd.DataFrame,
+    confidence_level: float = 0.95,
+    lookback_period: int = 252) -&gt; dict:
+</code></pre>
+<p>Calculate the Value at Risk (VaR) for the given instrument data.</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>instrument_data</code></td>
+<td><code>pd.DataFrame</code></td>
+<td>Historical price data for the instrument.</td>
+</tr>
+<tr>
+<td><code>confidence_level</code></td>
+<td><code>float</code></td>
+<td>The confidence level for VaR calculation (default: 0.95).</td>
+</tr>
+<tr>
+<td><code>lookback_period</code></td>
+<td><code>int</code></td>
+<td>The number of historical periods to consider for VaR calculation (default: 252).</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>float</code></td>
+<td>The calculated Value at Risk (VaR).</td>
+</tr>
+</tbody>
+</table>
+<h3 id="method-calculate_expected_shortfall"><strong>Method: calculate_expected_shortfall</strong></h3>
+<pre><code class="language-python">def calculate_expected_shortfall(
+    self,
+    instrument_data: pd.DataFrame,
+    confidence_level: float = 0.95,
+    lookback_period: int = 252) -&gt; dict:
+</code></pre>
+<p>Calculate the Expected Shortfall (ES) for the given instrument data.</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>instrument_data</code></td>
+<td><code>pd.DataFrame</code></td>
+<td>Historical price data for the instrument.</td>
+</tr>
+<tr>
+<td><code>confidence_level</code></td>
+<td><code>float</code></td>
+<td>The confidence level for ES calculation (default: 0.95).</td>
+</tr>
+<tr>
+<td><code>lookback_period</code></td>
+<td><code>int</code></td>
+<td>The number of historical periods to consider for ES calculation (default: 252).</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>float</code></td>
+<td>The calculated Expected Shortfall (ES).</td>
+</tr>
+</tbody>
+</table>
+<h2 id="class-unittests">Class: UnitTests</h2>
+<h3 id="method-run_unit_test"><strong>Method: run_unit_test</strong></h3>
+<pre><code class="language-python">def run_unit_test(
+    unit_test: UnitTests) -&gt; dict:
+</code></pre>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      &copy; 2024 <a href='https://quantjourney.substack.com' target='_blank'>jpolec</a>
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.fe8b6f2b.min.js"></script>
+      
+    
+  </body>
+</html>
