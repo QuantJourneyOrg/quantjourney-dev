@@ -1,7 +1,7 @@
 site_name: QuantJourney with Code (Dev)
 site_description: "QuantJourney with Code is a blog about quantitative finance, data science, and programming."
 site_author: Jakub Polec
-site_url: https://quantjourney.dev/
+site_url: https://quantjourneyorg.github.io/quantjourney-dev/
 
 theme:
   name: material
