@@ -11,8 +11,6 @@ Explore the world of quantitative trading with Python through our in-depth blog 
 - **Real-World Case Studies:** Apply what you learn to real trading scenarios.
 - **Community Support:** Engage with a community of like-minded quant traders.
 
-## Code
-To full code is available in private GitHub repository, and available to paid subscribers to [Quant Journey with Code blog](https://quantjourney.substack.com/). If you'd like to have an access please subscribe it.
 ## Reach us at
 
 * [Discord](https://discord.com/channels/1230850086452334634/1230850088235044916) - for discussion in Community
@@ -20,7 +18,6 @@ To full code is available in private GitHub repository, and available to paid su
 * [Telegram](https://t.me/+YIO_VWWD6s4zMTQ0) - for quick discussion
 * [Substack](https://quantjourney.substack.com) - for Blog Posts
 * [GitHub](https://github.com/jpolec/quantjourney) - Code Trading Framework (paid users)
-
 ## Get Started
 
 You can watch videos for most of the installation at Youtube at 'https://www.youtube.com/channel/UCe87vJTlGGtVt-UwiVQhmdQ'
