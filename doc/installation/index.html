@@ -1,0 +1,2178 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="QuantJourney with Code is a blog about quantitative finance, data science, and programming.">
+      
+      
+        <meta name="author" content="Jakub Polec">
+      
+      
+        <link rel="canonical" href="https://quantjourney.dev/doc/installation/">
+      
+      
+        <link rel="prev" href="../documentation/">
+      
+      
+        <link rel="next" href="../repo/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.28">
+    
+    
+      
+        <title>Installation MongoDB - QuantJourney with Code (Dev)</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.6543a935.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#installation-mongodb" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="QuantJourney with Code (Dev)" class="md-header__button md-logo" aria-label="QuantJourney with Code (Dev)" data-md-component="logo">
+      
+  <img src="../../images/logo_small_with_text_transparent.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            QuantJourney with Code (Dev)
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Installation MongoDB
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="QuantJourney with Code (Dev)" class="md-nav__button md-logo" aria-label="QuantJourney with Code (Dev)" data-md-component="logo">
+      
+  <img src="../../images/logo_small_with_text_transparent.png" alt="logo">
+
+    </a>
+    QuantJourney with Code (Dev)
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Welcome to Quant Journey with Code
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../backtesting/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Backtesting
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../index1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Welcome to Quant Journey with Code
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../index2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Welcome to Quant Journey with Code
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../videos/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Videos on Quantitative Trading
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Doc
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Doc
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../documentation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Start
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Installation MongoDB
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Installation MongoDB
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#video" class="md-nav__link">
+    <span class="md-ellipsis">
+      Video
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prerequisites
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-1-download-mongodb" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 1: Download MongoDB
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-2-install-mongodb" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 2: Install MongoDB
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-3-configuring-quantjourney-db-on-mongodb" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 3: Configuring QuantJourney DB on MongoDB
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-4-checking-mongodb" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 4: Checking MongoDB
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-5-running-mongodb-in-the-cloud-with-mongodb-atlas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 5: Running MongoDB in the Cloud with MongoDB Atlas
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../repo/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Getting QuantJourney Repository from GitHub
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_4" id="__nav_6_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Assets
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_4">
+            <span class="md-nav__icon md-icon"></span>
+            Assets
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../assets/bonds/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Module Information
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../assets/commodities/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Module Information
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../assets/crypto/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Module Information
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../assets/equities/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Module Information
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../assets/etfs/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Module Information
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../assets/forex/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Module Information
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../assets/futures/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Module Information
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../assets/indices/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Module Information
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../assets/macro/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Module Information
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../assets/reits/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Module Information
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_5" id="__nav_6_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Connectors
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_5">
+            <span class="md-nav__icon md-icon"></span>
+            Connectors
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../connectors/ccxt_connector/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Module Information
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../connectors/cnnfg_connector/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Module Information
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../connectors/eod_connector/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Module Information
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../connectors/fmp_connector/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Module Information
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../connectors/fred_connector/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Module Information
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../connectors/oanda_connector/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Module Information
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../connectors/quandl_connector/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Module Information
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../connectors/sec_connector/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Module Information
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../connectors/yf_connector/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Module Information
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_6" id="__nav_6_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Engine
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_6">
+            <span class="md-nav__icon md-icon"></span>
+            Engine
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../engine/base_class/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Base Strategy Class for Backtesting Framework
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../engine/cost_model/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Cost Model in Backtesting Framework
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../engine/data_manager/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Module Information
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../engine/execution_manager/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Execution Manager in Backtesting Framework
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../engine/forecast_engine/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Forecast Engine in Backtesting Framework
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../engine/market_regime/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Market Regime in Backtesting Framework
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../engine/market_regime_with_ml/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Market Regime with ML in Backtesting Framework
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../engine/monte_carlo_analyzer/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Monte Carlo Analyzer in Backtesting Framework
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../engine/performance_analytics/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Performance Analytics in Backtesting Framework
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../engine/performance_reporting/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Performance Reporting in Backtesting Framework
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../engine/portfolio_construction/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Portfolio Construction in Backtesting Framework
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../engine/portfolio_optimizer/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Portfolio Optimizer in Backtesting Framework
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../engine/profitloss_tracker/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Portfolio Tracker in Backtesting Framework
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../engine/risk_management/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Module Information
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../engine/signal_generator/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Signal Generator in Backtesting Framework
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../engine/transaction_cost_analysis/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Transaction Cost Analysis in Backtesting Framework
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../engine/volatility_engine/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Volatility Engine in Backtesting Framework
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_7" id="__nav_6_7_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Exchanges
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_7">
+            <span class="md-nav__icon md-icon"></span>
+            Exchanges
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../exchanges/ibkr_exchange/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ibkr exchange
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_8" id="__nav_6_8_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Utils
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_8">
+            <span class="md-nav__icon md-icon"></span>
+            Utils
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../utils/data_connector/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Module Information
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../utils/data_manager/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Module Information
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Strat
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            Strat
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../strat/strategies/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Quantitative Trading Strategies
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_7_2" id="__nav_7_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Statistical arbitrage
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_2">
+            <span class="md-nav__icon md-icon"></span>
+            Statistical arbitrage
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../strat/statistical_arbitrage/event_driven/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Event driven
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../strat/statistical_arbitrage/factor_investing/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Factor investing
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../strat/statistical_arbitrage/hft/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Hft
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../strat/statistical_arbitrage/machine_learning/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Machine learning
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../strat/statistical_arbitrage/mean_reversion/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Mean reversion
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../strat/statistical_arbitrage/momentum_investing/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Momentum investing
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../strat/statistical_arbitrage/overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Tutorials
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            Tutorials
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorials/backtesting-general/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Backtesting - How easy is it to get it wrong?
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorials/tutorials/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Blog on Quantitative Trading
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#video" class="md-nav__link">
+    <span class="md-ellipsis">
+      Video
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prerequisites
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-1-download-mongodb" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 1: Download MongoDB
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-2-install-mongodb" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 2: Install MongoDB
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-3-configuring-quantjourney-db-on-mongodb" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 3: Configuring QuantJourney DB on MongoDB
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-4-checking-mongodb" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 4: Checking MongoDB
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-5-running-mongodb-in-the-cloud-with-mongodb-atlas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 5: Running MongoDB in the Cloud with MongoDB Atlas
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="installation-mongodb"><strong>Installation MongoDB</strong></h1>
+<p>In this section, we'll walk through the process of downloading, installing, and setting up MongoDB on your local machine. We'll also explore how to create a database, user, and run some basic operations using scripts.
+d</p>
+<h2 id="video">Video</h2>
+<p>You can watch video explaining how to use MongoDB in QuantJourney Framework at 
+x  xi
+dddd</p>
+<h2 id="prerequisites">Prerequisites</h2>
+<p>Before we begin, make sure you have the following:</p>
+<ul>
+<li>A computer running macOS, Linux, or Windows</li>
+<li>Basic knowledge of the command line interface (CLI)</li>
+</ul>
+<h2 id="step-1-download-mongodb"><strong>Step 1: Download MongoDB</strong></h2>
+<p>A) Visit the official MongoDB website: <a href="https://www.mongodb.com/docs/manual/tutorial/install-mongodb-on-os-x/y">https://www.mongodb.com/docs/manual/tutorial/install-mongodb-on-os-x/</a></p>
+<div style="border: 2px solid lightgrey; padding: 10px; display: inline-block;">
+    <img src="/doc/mongodb_web_download.png" alt="MongoDB Download">
+</div>
+
+<p>B) Choose your operating system on the left and then decide how you want to install MongoDB on your computer with the presented options. I am using the Homebrew package manager on macOS (read more at: https://hornebnew.com/), which simplifies the installation.</p>
+<div style="border: 2px solid lightgrey; padding: 10px; display: inline-block;">
+    <img src="/doc/mongodb_web_installation.png" alt="MongoDB Installation">
+</div>
+
+<h2 id="step-2-install-mongodb"><strong>Step 2: Install MongoDB</strong></h2>
+<p>A) While using the Homebrew package manager, type the following in your terminal to download the latest version of <strong>MongoDB Community Edition</strong>. It's completely free of charge.</p>
+<pre><code class="language-bash">brew install mongodb-community@7.0
+</code></pre>
+<div style="border: 2px solid lightgrey; padding: 10px; display: inline-block;">
+    <img src="/doc/mongodb_start_services.png" alt="MongoDB Start Services">
+</div>
+
+<p>B) Now that it is downloaded, let's try to start MongoDB with the following command:</p>
+<pre><code class="language-bash">brew services start mongodb-community@7.0
+</code></pre>
+<p>It should run, and with <code>brew services</code> you should be able to see that your MongoDB daemon is running. However, for QuantJourney, we want to run the <strong>mongod daemon</strong> (MongoDB process) manually as a background process using a config file and specifying our <code>_log</code> (for logging), <code>_data</code> (for data storing), etc. directories.</p>
+<p>You can run the above command to check if all is okay.</p>
+<p>C) To run MongoDB with our config file, start it by executing the <code>start_mongodb.sh</code> shell script from your terminal from the main directory:</p>
+<pre><code class="language-bash">#!/bin/bash
+
+# Set the data directory path
+DATA_DIR=&quot;/Users/jakub/quantjourney/_data/mongodb&quot;
+
+# Set the log directory path
+LOG_DIR=&quot;/Users/jakub/quantjourney/_logs&quot;
+
+# Create the data directory if it doesn't exist
+mkdir -p &quot;$DATA_DIR&quot;
+
+# Create the log directory if it doesn't exist
+mkdir -p &quot;$LOG_DIR&quot;
+
+# Start MongoDB with the specified data directory and log file on localhost port 27019
+mongod --dbpath &quot;$DATA_DIR&quot; --logpath &quot;$LOG_DIR/mongodb.log&quot; --logappend --port 27019 --bind_ip localhost
+</code></pre>
+<p>Prior to running the script, change the directories <code>DATA_DIR</code> and <code>LOG_DIR</code> to your own.</p>
+<p>The default port for MongoDB is 27017; however, you may change it if needed. In this case, it is set to 27019. In the future, we may run MongoDB replicas (multiple databases sharing data), and these ports will become important for distinguishing between different instances.</p>
+<p>This script will start the <strong>mongod daemon</strong> and set the proper config for our use. You may notice that the <code>_log</code> and <code>_data</code> directories will be automatically created in the main directory.</p>
+<p>Please note that in macOS you may need to add rights to execute this script, as follows:</p>
+<pre><code class="language-bash">chmod +x start_mongodb.sh
+</code></pre>
+<h2 id="step-3-configuring-quantjourney-db-on-mongodb"><strong>Step 3: Configuring QuantJourney DB on MongoDB</strong></h2>
+<p>A) The <code>start_mongodb.sh</code> shell script will start MongoDB; however, we need to set up our database with proper privileges and names, which we will then use in our Python code.</p>
+<p>For that, you should get another shell script <code>create_mongodb.sh</code> from the main directory:</p>
+<pre><code class="language-bash">#!/bin/bash
+
+# Set MongoDB connection details
+MONGO_DB=&quot;quantjp&quot;
+MONGO_USER=&quot;jakub&quot;
+MONGO_PW=&quot;password&quot;
+MONGO_ADMIN_PW=&quot;-123456789-&quot;
+MONGO_CLUSTER=&quot;localhost:27019&quot;
+
+# Connect to MongoDB admin database
+mongosh &quot;$MONGO_CLUSTER/admin&quot; &lt;&lt;EOF
+  // Enable access control
+  db.runCommand({ setParameter: 1, authenticationMechanisms: 'SCRAM-SHA-256' })
+
+  // Create admin user
+  db.createUser({
+    user: 'admin',
+    pwd: '$MONGO_ADMIN_PW',
+    roles: [
+      { role: 'userAdminAnyDatabase', db: 'admin' },
+      { role: 'dbAdminAnyDatabase', db: 'admin' },
+      { role: 'clusterAdmin', db: 'admin' }
+    ]
+  })
+
+  // Authenticate as admin user
+  db.auth('admin', '$MONGO_ADMIN_PW')
+
+  // Create the database (it will be created automatically when it's used the first time)
+  use $MONGO_DB
+
+  // Create user with specified username and password
+  db.createUser({
+    user: &quot;$MONGO_USER&quot;,
+    pwd: &quot;$MONGO_PW&quot;,
+    customData: { appName: &quot;quantjp&quot; },
+    roles: [
+      { role: &quot;readWrite&quot;, db: &quot;$MONGO_DB&quot; }
+    ]
+  })
+
+  // Create a sample collection and insert a document to ensure the database is created
+  db.createCollection(&quot;general&quot;)
+  db.general.insertOne({ message: &quot;Database created successfully.&quot; })
+EOF
+</code></pre>
+<p>You can see this script creates a few things. Firstly, it sets the proper roles for the <code>admin</code> user (the main user of the DB instance) and changes the default password for <code>admin</code> to <code>-123456789-</code>. It is good practice to change the default password of used applications. Then, the script creates a regular user to operate the DB with the name <code>jakub</code>, assigns the password <code>password</code>, creates a DB with the name <code>quantjp</code>, and grants privileges to this user for the created DB.</p>
+<p>You may modify those parameters, but then in the configuration file for the QuantJourney framework, you will have to specify them again to access MongoDB. Here, the parameters are used to create the DB; in the config file, they will be used to access it.</p>
+<p>Please note that in macOS you may need to add rights to execute this script, as follows:</p>
+<pre><code class="language-bash">chmod +x create_mongodb.sh
+</code></pre>
+<h2 id="step-4-checking-mongodb"><strong>Step 4: Checking MongoDB</strong></h2>
+<p>A) Once the DB is created, we may start it again and check if all is fine. I usually use MongoDB Compass for this, which you can download from <a href="https://www.mongodb.com/products/tools/compass">https://www.mongodb.com/products/tools/compass</a></p>
+<p>After installing it, you may connect to your MongoDB with:</p>
+<pre><code>mongodb://localhost:27017/
+</code></pre>
+<p>or directly from Compass.</p>
+<p>Then you should see:</p>
+<div style="border: 2px solid lightgrey; padding: 10px; display: inline-block;">
+    <img src="/doc/mongodb_compass_installation.png" alt="MongoDB Compass">
+</div>
+
+<p>Please note I have more DBs (collections), which we will create while running our framework.</p>
+<p>Congratulations! You have successfully installed MongoDB, created a database, user, and performed some basic operations using scripts.</p>
+<h2 id="step-5-running-mongodb-in-the-cloud-with-mongodb-atlas"><strong>Step 5: Running MongoDB in the Cloud with MongoDB Atlas</strong></h2>
+<p>If you don't want to run MongoDB locally on your computer, you can use MongoDB Atlas, a cloud-based database service that provides robust features and scalability. To get started with MongoDB Atlas:</p>
+<ol>
+<li>Sign up for a free account at <a href="https://www.mongodb.com/cloud/atlas">MongoDB Atlas</a>.</li>
+<li>Follow the instructions to create a new cluster (MongoDB running as a cluster in the cloud).</li>
+<li>Configure your cluster settings, including region and instance size.</li>
+<li>Connect to your cluster using the provided connection string.</li>
+</ol>
+<p>With MongoDB Atlas, you can easily manage and scale your MongoDB deployments in the cloud. The only difference will be modifying the config file in QuantJourney to access the cloud version.</p>
+<p>The local version will be available as:</p>
+<pre><code class="language-python"># Connect to local MongoDB instance
+client = MongoClient('mongodb://localhost:27017/')
+</code></pre>
+<p>while the cloud version will be:</p>
+<pre><code class="language-python">client = MongoClient('mongodb+srv://&lt;username&gt;:&lt;password&gt;@&lt;cluster-url&gt;/test?retryWrites=true&amp;w=majority')
+</code></pre>
+<p>so only the URL will change.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      &copy; 2024 <a href='https://quantjourney.substack.com' target='_blank'>jpolec</a>
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.fe8b6f2b.min.js"></script>
+      
+    
+  </body>
+</html>
