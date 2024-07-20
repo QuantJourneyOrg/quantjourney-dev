@@ -1,10 +1,16 @@
-# **Installation MongoDB**
+<div style="color: #0e1a30;">
+  <div style="text-align: left; margin-top: 10px; margin-bottom: 0px; padding-bottom: -10px;">
+    <h1 style="font-size: 36px; color: #0e1a30; margin-bottom: 5px;">Installation MongoDB</h1>
+    <div style="font-size: 20px; color: #FF4500; margin-top: 0; margin-bottom: 20px">Please note your have to have Repo from GitHub. Only for paid Subscribers.</div>
+  </div>
+</div>
+
 In this section, we'll walk through the process of downloading, installing, and setting up MongoDB on your local machine. We'll also explore how to create a database, user, and run some basic operations using scripts.
 d
 ## Video
-You can watch video explaining how to use MongoDB in QuantJourney Framework at 
-x  xi
-dddd
+
+You can watch a video explaining how to use MongoDB in QuantJourney Framework [here](https://youtu.be/jsTGVXGx6cQ).
+
 ## Prerequisites
 
 Before we begin, make sure you have the following:
@@ -17,13 +23,13 @@ Before we begin, make sure you have the following:
 A) Visit the official MongoDB website: [https://www.mongodb.com/docs/manual/tutorial/install-mongodb-on-os-x/](https://www.mongodb.com/docs/manual/tutorial/install-mongodb-on-os-x/y)
 
 <div style="border: 2px solid lightgrey; padding: 10px; display: inline-block;">
-    <img src=../docs/mongodb_web_download.png" alt="MongoDB Download">
+    <img src="/images/mongodb_web_download.png" alt="MongoDB Download">
 </div>
 
 B) Choose your operating system on the left and then decide how you want to install MongoDB on your computer with the presented options. I am using the Homebrew package manager on macOS (read more at: https://hornebnew.com/), which simplifies the installation.
 
 <div style="border: 2px solid lightgrey; padding: 10px; display: inline-block;">
-    <img src=../docs/mongodb_web_installation.png" alt="MongoDB Installation">
+    <img src="/images/mongodb_web_installation.png" alt="MongoDB Installation">
 </div>
 
 ## **Step 2: Install MongoDB**
@@ -35,7 +41,7 @@ brew install mongodb-community@7.0
 ```
 
 <div style="border: 2px solid lightgrey; padding: 10px; display: inline-block;">
-    <img src=../docs/mongodb_start_services.png" alt="MongoDB Start Services">
+    <img src="/images/mongodb_start_services.png" alt="MongoDB Start Services">
 </div>
 
 B) Now that it is downloaded, let's try to start MongoDB with the following command:
@@ -160,7 +166,7 @@ or directly from Compass.
 Then you should see:
 
 <div style="border: 2px solid lightgrey; padding: 10px; display: inline-block;">
-    <img src=../docs/mongodb_compass_installation.png" alt="MongoDB Compass">
+    <img src="/images/mongodb_compass_installation.png" alt="MongoDB Compass">
 </div>
 
 Please note I have more DBs (collections), which we will create while running our framework.
@@ -192,3 +198,5 @@ client = MongoClient('mongodb+srv://<username>:<password>@<cluster-url>/test?ret
 ```
 
 so only the URL will change.
+<div style="padding: 50px">
+</div>

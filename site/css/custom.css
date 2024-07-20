@@ -1,5 +1,30 @@
 /* extra.css */
 
+:root {
+    --md-primary-fg-color:        #FF4500;
+    --md-primary-fg-color--light: #ECB7B7;
+    --md-primary-fg-color--dark:  #B8d000;
+    --md-text-color:              #B8d000;  /* example text color */
+    --md-text-color-light:        #B8d000;  /* example light text color */
+    --md-text-color-dark:         #B8d000;  /* example dark text color */
+}
+
+:root {
+    --md-primary-fg-color:        #EE0F0F;
+    --md-primary-fg-color--light: #ECB7B7;
+    --md-primary-fg-color--dark:  #B8d000;
+    --md-text-color:              #333333;  /* example text color */
+    --md-text-color-light:        #666666;  /* example light text color */
+    --md-text-color-dark:         #000000;  /* example dark text color */
+}
+
+div[style*="text-align: left; margin-top: 10px; margin-bottom: 0px; padding-bottom: -10px;"] {
+    font-size: 20px;
+    color: #FF4500;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
 
 .md-header {
     background-color: #28548A;

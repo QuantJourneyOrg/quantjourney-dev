@@ -1,4 +1,9 @@
-# **Start**
+
+  <div style="text-align: left; margin-top: 10px; margin-bottom: 0px; padding-bottom: -10px;">
+    <h1 class="start-heading" style="font-size: 36px; margin-bottom: 5px;">Start</h1>
+    <div style="font-size: 20px; color: #FF4500; margin-top: 0; margin-bottom: 20px">Explore the world of quantitative trading with Python</div>
+  </div>
+
 
 Welcome to the Documentation section of our Trading Framework and Backtesting Framework! This aim of this guide is to provide users, developers, and contributors with comprehensive information on how to install, configure, and use our software effectively. Below, you will find detailed descriptions, step-by-step tutorials, and additional resources to help you understand and work with our product.
 
@@ -10,11 +15,8 @@ The documentation is organized into several key areas as:
 * Exchanges - the wrapper to execute trades (IBKR as per now)
 * Backtesting - the complete framework for backtesting 
 
-### Example (this is just an example of exmaple, see more in Examples section)
-Please see how easily is to use the Qlib framework, in your Python code. The below example is getting daily data for Apple from EOD Historical Data source and presenting.
-You may modify ([see examples]../docs/examples/get_equities/)) to select other sources and to get it directly from DataBase. 
 
-### Python Code Example
+Code Example
 
 ```python
 # Initialize Data Connector
@@ -63,10 +65,5 @@ We rely on data sourced from the Internet, including both free and paid services
 
 You should choose data sources based on your specific requirements. Much of the research and analysis conducted by QuantJourney can be performed using the free-of-charge Yahoo Finance data. It’s up to you to determine what data you need to run your analyses effectively.
 
-## **Code and GitHub Repository**
-To full code is available in private GitHub repository, and available to paid subscribers to [Quant Journey with Code blog](https://quantjourney.substack.com/). If you'd like to have an access please subscribe it.
-
-
-The best way is to start with examples, and discover more!
-
-If you have any questions, please contact me directly.
+<div style="padding: 50px">
+</div>

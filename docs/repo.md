@@ -1,5 +1,9 @@
-# **Getting QuantJourney Repository from GitHub**
-
+<div>
+  <div style="text-align: left; margin-top: 10px; margin-bottom: 0px; padding-bottom: -10px;">
+    <h1 class="start-heading" style="font-size: 36px; margin-bottom: 5px;">Getting Quant Journey Repository from GitHub</h1>
+    <div style="font-size: 20px; color: #FF4500; margin-top: 0; margin-bottom: 20px">Access only for paid Subscribers.</div>
+  </div>
+</div>
 In this section, we will clone the QuantJourney repository from GitHub, unpack the contents, and set up the Python environment.
 
 ## **Step 1: Cloning a Repository**
@@ -13,9 +17,9 @@ Alternatively, you can download Git and install it on your computer from [Git SC
 
 B) Once you have your directory for the project, e.g., `/Users/<your_name>/quantjourney` (for OSX), you may do:
 ```bash
-   cd path/to/your/folder
+cd path/to/your/folder
 
-   git clone https://github.com/jpolec/quantjourney.git
+git clone https://github.com/jpolec/quantjourney.git
 ```
 
 This downloads the repository and its entire version history.
@@ -52,8 +56,8 @@ A) In order QuantJourney be able to use DB and other sources of data we have to 
 
 It looks like:
 
-<div style="border: 2px solid lightgrey; padding: 10px; display: inline-block;">
-    <img src=../docs/repo.png" alt="MongoDB Download">
+<div style="border: 2px solid lightgrey; padding: 10px; display: inline-block; width: 60%;">
+    <img src="/images/repo.png" style="width: 100%;" alt="MongoDB Download">
 </div>
 
 As you may see in the bottom there is a configuration for MongoDB which we set-up during [MongoDB installation](installation.md)
@@ -68,6 +72,7 @@ If you don't have an access to some of those sources of data, you may leave such
 
 That's all. Your QuantJourney repository should work right now.
 
-The best way will be to check 
-```bash
+You may run data_manager from quantjourney/data directory.
 
+<div style="padding: 50px">
+</div>

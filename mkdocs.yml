@@ -12,23 +12,27 @@ theme:
   - navigation.top
   - navigation.indexes
   - navigation.footer
+  - navigation.tracking
+  - navigation.instant
+  - navigation.instant.progress
   - announce.dismiss
   - content.action.edit
   - content.action.view
   - content.code.annotate
   - content.code.copy
   - toc.integrate
+  - toc.follow
   palette:
   - media: "(prefers-color-scheme: light)"
     scheme: default
-    primary: indigo
+    primary: custom
     accent: indigo
     toggle:
       icon: material/brightness-7
       name: Switch to dark mode
   - media: "(prefers-color-scheme: dark)"
     scheme: slate
-    primary: indigo
+    primary: custom
     accent: indigo
     toggle:
       icon: material/brightness-4
@@ -36,12 +40,18 @@ theme:
   font:
     text: Roboto
     code: Roboto Mono
+  logo: images/logo_transparent.png
+  favicon: images/logo_transparent.png
 
 
 extra_javascript:
 - js/custom.js
 extra_css:
 - css/custom.css
+extra:
+  analytics:
+    provider: google
+    property: G-T9FDD6X3NV
 
 use_directory_urls: true
 

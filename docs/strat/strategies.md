@@ -1,4 +1,9 @@
-# Quantitative Trading Strategies
+<div style="color: #0e1a30;">
+  <div style="text-align: left; margin-top: 10px; margin-bottom: 0px; padding-bottom: -10px;">
+    <h1 class="start-heading" style="font-size: 36px; margin-bottom: 5px;">Quantitative Trading Strategies</h1>
+    <div style="font-size: 20px; color: #FF4500; margin-top: 0; margin-bottom: 20px">Please note the full code of each strategy is for paid Subscribers</div>
+  </div>
+</div>
 
 Quantitative trading strategies utilize mathematical models to identify trading opportunities. Here are some of the top strategies used by quantitative traders:
 
@@ -26,3 +31,6 @@ Quantitative trading strategies utilize mathematical models to identify trading 
 ## Further Reading
 
 - For more in-depth analysis and case studies on quantitative trading strategies, refer to our [Documentation](../../docs/documentation.md) or visit our [Blog](../blog/blog.md).
+
+<div style="padding: 50px">
+</div>

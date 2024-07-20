@@ -3,9 +3,9 @@ hide:
   - navigation
 ---
 
-<div style="width: 90%; margin: auto;">
+<div style="width: 90%; margin: auto; padding-bottom: 50px">
   <div style="text-align: left; margin-top: 10px; margin-bottom: 0px; padding-bottom: -10px;">
-    <h1 style="font-size: 36px; font-weight: bold; color: #222222; margin-bottom: 5px;">Become a Member of Quant Journey</h1>
+    <h1 class="start-heading" style="font-size: 36px; margin-bottom: 5px;">Become a Member of Quant Journey</h1>
     <div style="font-size: 20px; color: #FF4500; margin-top: 0; margin-bottom: 20px">Join over 2000 Subscribers!</div>
   </div>
 
@@ -14,7 +14,7 @@ hide:
 
   <div style="width: 90%; margin: auto; display: flex; justify-content: space-between; margin-top: 40px; margin-bottom: 30px;">
 
-    <div style="flex: 1; margin-right: 15px; padding: 16px; background-color: #f0f8ff; border: 1px solid #ccc; border-radius: 10px; text-align: center; display: flex; flex-direction: column; align-items: center;">
+    <div class="box-heading" style="flex: 1; margin-right: 15px; padding: 16px;  border: 1px solid #ccc; border-radius: 10px; text-align: center; display: flex; flex-direction: column; align-items: center;">
       <h3 style="font-size: 22px; font-weight: bold; display: flex; align-items: center; justify-content: center; margin: 5px 0;">
         <span style="font-size: 20px; margin-right: 10px;">🤖</span>
         Trading Strategies
@@ -32,7 +32,7 @@ hide:
       <p style="margin: 3px 0; font-size: 16px; margin-top: 16px;">Pay monthly, cancel anytime 👌</p>
     </div>
 
-    <div style="flex: 1; margin-right: 15px; padding: 16px; background-color: #f0f8ff; border: 1px solid #ccc; border-radius: 10px; text-align: center; display: flex; flex-direction: column; align-items: center;">
+    <div class="box-heading" style="flex: 1; margin-right: 15px; padding: 16px; border: 1px solid #ccc; border-radius: 10px; text-align: center; display: flex; flex-direction: column; align-items: center;">
       <h3 style="font-size: 22px; font-weight: bold; display: flex; align-items: center; justify-content: center; margin: 5px 0;">
         <span style="font-size: 20px; margin-right: 10px;">🚀</span>
         Monthly Access
@@ -52,7 +52,7 @@ hide:
       
     </div>
 
-    <div style="flex: 1; margin-right: 5px; padding: 16px; background-color: #f0f8ff; border: 1px solid #ccc; border-radius: 10px; text-align: center; display: flex; flex-direction: column; align-items: center;">
+    <div class="box-heading" style="flex: 1; margin-right: 5px; padding: 16px; border: 1px solid #ccc; border-radius: 10px; text-align: center; display: flex; flex-direction: column; align-items: center;">
       <h3 style="font-size: 22px; font-weight: bold; display: flex; align-items: center; justify-content: center; margin: 5px 0;">
         <span style="font-size: 20px; margin-right: 10px;">🚀</span>
         Annual Access
@@ -79,8 +79,7 @@ hide:
 
 
   <div style="text-align: left; margin-top: 50px; margin-bottom: 0px;">
-    <h1 style="font-size: 36px; font-weight: bold; color: #222222; margin-bottom: 5px;">Testimonials</h1>
-    <div style="font-size: 20px; color: #FF4500; margin-top: 0; margin-bottom: 20px">See what others are saying about Quant Journey</div>
+    <div style="font-size: 20px; margin-top: 0; margin-bottom: 20px">See what others are saying about Quant Journey</div>
   </div>
 
   <div style="display: flex; align-items: center; width: 90%; justify-content: space-between; gap: 20px; margin: 20px auto;">
@@ -97,11 +96,10 @@ hide:
 
 
   <div style="text-align: left; margin-top: 50px; margin-bottom: 0px;">
-    <h2 style="font-size: 36px; font-weight: bold; color: #222222; margin-bottom: 5px;">Membership Comparison</h2>
-    <div style="font-size: 20px; color: #FF4500; margin-top: 0; margin-bottom: 20px">Compare packages</div>
+    <div style="font-size: 20px; margin-top: 0; margin-bottom: 20px">Compare packages</div>
   </div>
 
-  <div style="width: 80%; margin: 20px auto; padding-bottom: 100px;">
+  <div style="width: 80%; margin: 20px auto;">
     <style>
       .comparison-table {
         width: 100%;
@@ -125,11 +123,11 @@ hide:
       }
       .check {
         color: #177ed2;
-        font-size: 20px;
+        font-size: 18px;
       }
       .cross {
         color: #FF4500;
-        font-size: 20px;
+        font-size: 18px;
       }
     </style>
 
