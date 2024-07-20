@@ -71,66 +71,6 @@
     
     
     
-
-<style>
-.top-line {
-    background-color: #ecc02f;
-    color: #0c3bbd;
-    text-align: center;
-    padding: 14px 15px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    height: 35px;
-    font-size: 20px;
-    align-items: center;
-    justify-content: center;
-    flex: 1;
-    display: flex;
-}
-.close-btn {
-    cursor: pointer;
-    padding: 0 12px;
-    position: absolute;
-    right: 50px;
-}
-.md-header {
-    transition: top 0.3s;
-}
-.md-container {
-    transition: padding-top 0.3s;
-}
-</style>
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-    var topLine = document.querySelector('.top-line');
-    var header = document.querySelector('.md-header');
-    var container = document.querySelector('.md-container');
-
-    function closeTopLine() {
-        topLine.style.display = 'none';
-        header.style.top = '0';
-        container.style.paddingTop = '0';
-        localStorage.setItem('topLineClosed', 'true');
-    }
-
-    function checkTopLineStatus() {
-        if (localStorage.getItem('topLineClosed') === 'true') {
-            closeTopLine();
-        } else {
-            header.style.top = '35px';
-            container.style.paddingTop = '30px';
-        }
-    }
-
-    if (topLine) {
-        topLine.querySelector('.close-btn').addEventListener('click', closeTopLine);
-    }
-
-    checkTopLineStatus();
-});
-</script>
-
   </head>
   
   
@@ -409,11 +349,6 @@ document.addEventListener('DOMContentLoaded', function() {
       <main class="md-main" data-md-component="main">
         <div class="md-main__inner md-grid">
           
-<div class="top-line">
-    <span>🚀 Please note this site is still a work in progress. Not everything may work! 🚀</span>
-    <span class="close-btn">✕</span>
-</div>
-
             
               
               <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
@@ -2775,7 +2710,6 @@ document.addEventListener('DOMContentLoaded', function() {
             
             
           
-
           
             <div class="md-content" data-md-component="content">
               <article class="md-content__inner md-typeset">

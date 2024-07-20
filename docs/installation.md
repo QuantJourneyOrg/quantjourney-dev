@@ -1,6 +1,6 @@
-<div style="color: #0e1a30;">
+<div>
   <div style="text-align: left; margin-top: 10px; margin-bottom: 0px; padding-bottom: -10px;">
-    <h1 style="font-size: 36px; color: #0e1a30; margin-bottom: 5px;">Installation MongoDB</h1>
+    <h1 style="font-size: 36px; margin-bottom: 5px;">Installation MongoDB</h1>
     <div style="font-size: 20px; color: #FF4500; margin-top: 0; margin-bottom: 20px">Please note your have to have Repo from GitHub. Only for paid Subscribers.</div>
   </div>
 </div>

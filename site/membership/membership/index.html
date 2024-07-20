@@ -71,66 +71,6 @@
     
     
     
-
-<style>
-.top-line {
-    background-color: #ecc02f;
-    color: #0c3bbd;
-    text-align: center;
-    padding: 14px 15px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    height: 35px;
-    font-size: 20px;
-    align-items: center;
-    justify-content: center;
-    flex: 1;
-    display: flex;
-}
-.close-btn {
-    cursor: pointer;
-    padding: 0 12px;
-    position: absolute;
-    right: 50px;
-}
-.md-header {
-    transition: top 0.3s;
-}
-.md-container {
-    transition: padding-top 0.3s;
-}
-</style>
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-    var topLine = document.querySelector('.top-line');
-    var header = document.querySelector('.md-header');
-    var container = document.querySelector('.md-container');
-
-    function closeTopLine() {
-        topLine.style.display = 'none';
-        header.style.top = '0';
-        container.style.paddingTop = '0';
-        localStorage.setItem('topLineClosed', 'true');
-    }
-
-    function checkTopLineStatus() {
-        if (localStorage.getItem('topLineClosed') === 'true') {
-            closeTopLine();
-        } else {
-            header.style.top = '35px';
-            container.style.paddingTop = '30px';
-        }
-    }
-
-    if (topLine) {
-        topLine.querySelector('.close-btn').addEventListener('click', closeTopLine);
-    }
-
-    checkTopLineStatus();
-});
-</script>
-
   </head>
   
   
@@ -402,11 +342,6 @@ document.addEventListener('DOMContentLoaded', function() {
       <main class="md-main" data-md-component="main">
         <div class="md-main__inner md-grid">
           
-<div class="top-line">
-    <span>🚀 Please note this site is still a work in progress. Not everything may work! 🚀</span>
-    <span class="close-btn">✕</span>
-</div>
-
             
               
                 
@@ -2284,7 +2219,6 @@ document.addEventListener('DOMContentLoaded', function() {
             
             
           
-
           
             <div class="md-content" data-md-component="content">
               <article class="md-content__inner md-typeset">
@@ -2292,9 +2226,9 @@ document.addEventListener('DOMContentLoaded', function() {
                   
 
 
-<div style="width: 90%; margin: auto; color: #0e1a30; padding-bottom: 50px">
+<div style="width: 90%; margin: auto; padding-bottom: 50px">
   <div style="text-align: left; margin-top: 10px; margin-bottom: 0px; padding-bottom: -10px;">
-    <h1 style="font-size: 36px; color: #0e1a30; margin-bottom: 5px;">Become a Member of Quant Journey</h1>
+    <h1 class="start-heading" style="font-size: 36px; margin-bottom: 5px;">Become a Member of Quant Journey</h1>
     <div style="font-size: 20px; color: #FF4500; margin-top: 0; margin-bottom: 20px">Join over 2000 Subscribers!</div>
   </div>
 
@@ -2303,7 +2237,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
   <div style="width: 90%; margin: auto; display: flex; justify-content: space-between; margin-top: 40px; margin-bottom: 30px;">
 
-    <div style="flex: 1; margin-right: 15px; padding: 16px; background-color: #f0f8ff; border: 1px solid #ccc; border-radius: 10px; text-align: center; display: flex; flex-direction: column; align-items: center;">
+    <div class="box-heading" style="flex: 1; margin-right: 15px; padding: 16px;  border: 1px solid #ccc; border-radius: 10px; text-align: center; display: flex; flex-direction: column; align-items: center;">
       <h3 style="font-size: 22px; font-weight: bold; display: flex; align-items: center; justify-content: center; margin: 5px 0;">
         <span style="font-size: 20px; margin-right: 10px;">🤖</span>
         Trading Strategies
@@ -2321,7 +2255,7 @@ document.addEventListener('DOMContentLoaded', function() {
       <p style="margin: 3px 0; font-size: 16px; margin-top: 16px;">Pay monthly, cancel anytime 👌</p>
     </div>
 
-    <div style="flex: 1; margin-right: 15px; padding: 16px; background-color: #f0f8ff; border: 1px solid #ccc; border-radius: 10px; text-align: center; display: flex; flex-direction: column; align-items: center;">
+    <div class="box-heading" style="flex: 1; margin-right: 15px; padding: 16px; border: 1px solid #ccc; border-radius: 10px; text-align: center; display: flex; flex-direction: column; align-items: center;">
       <h3 style="font-size: 22px; font-weight: bold; display: flex; align-items: center; justify-content: center; margin: 5px 0;">
         <span style="font-size: 20px; margin-right: 10px;">🚀</span>
         Monthly Access
@@ -2341,7 +2275,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     </div>
 
-    <div style="flex: 1; margin-right: 5px; padding: 16px; background-color: #f0f8ff; border: 1px solid #ccc; border-radius: 10px; text-align: center; display: flex; flex-direction: column; align-items: center;">
+    <div class="box-heading" style="flex: 1; margin-right: 5px; padding: 16px; border: 1px solid #ccc; border-radius: 10px; text-align: center; display: flex; flex-direction: column; align-items: center;">
       <h3 style="font-size: 22px; font-weight: bold; display: flex; align-items: center; justify-content: center; margin: 5px 0;">
         <span style="font-size: 20px; margin-right: 10px;">🚀</span>
         Annual Access
@@ -2368,7 +2302,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
   <div style="text-align: left; margin-top: 50px; margin-bottom: 0px;">
-    <div style="font-size: 20px; color: #0e1a30; margin-top: 0; margin-bottom: 20px">See what others are saying about Quant Journey</div>
+    <div style="font-size: 20px; margin-top: 0; margin-bottom: 20px">See what others are saying about Quant Journey</div>
   </div>
 
   <div style="display: flex; align-items: center; width: 90%; justify-content: space-between; gap: 20px; margin: 20px auto;">
@@ -2385,7 +2319,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
   <div style="text-align: left; margin-top: 50px; margin-bottom: 0px;">
-    <div style="font-size: 20px; color: #0e1a30; margin-top: 0; margin-bottom: 20px">Compare packages</div>
+    <div style="font-size: 20px; margin-top: 0; margin-bottom: 20px">Compare packages</div>
   </div>
 
   <div style="width: 80%; margin: 20px auto;">
