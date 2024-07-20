@@ -37,21 +37,21 @@
 }
 
 .md-footer-logo {
-    font-size: 26px;
+    font-size: 22px;
     font-weight: bold;
     color: #ffffff;
     margin-bottom: 10px;
 }
 
 .md-footer-description {
-    font-size: 18px;
+    font-size: 14px;
     color: #ffffff;
     line-height: 1;
     line-height: 1.6;
 }
 
 .md-footer-heading {
-    font-size: 22x;
+    font-size: 18x;
     font-weight: bold;
     color: #ffffff;
 }
@@ -72,7 +72,7 @@
 .md-footer-list a {
     color: #d0d0d0;
     text-decoration: none;
-    font-size: 18px;
+    font-size: 14px;
     transition: color 0.3s ease;
 }
 
