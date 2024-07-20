@@ -1,0 +1,71 @@
+{% extends "base.html" %}
+
+{% block extrahead %}
+{{ super() }}
+<style>
+.top-line {
+    background-color: #ecc02f;
+    color: #0c3bbd;
+    text-align: center;
+    padding: 14px 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 35px;
+    font-size: 20px;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    display: flex;
+}
+.close-btn {
+    cursor: pointer;
+    padding: 0 12px;
+    position: absolute;
+    right: 50px;
+}
+.md-header {
+    transition: top 0.3s;
+}
+.md-container {
+    transition: padding-top 0.3s;
+}
+</style>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    var topLine = document.querySelector('.top-line');
+    var header = document.querySelector('.md-header');
+    var container = document.querySelector('.md-container');
+
+    function closeTopLine() {
+        topLine.style.display = 'none';
+        header.style.top = '0';
+        container.style.paddingTop = '0';
+        localStorage.setItem('topLineClosed', 'true');
+    }
+
+    function checkTopLineStatus() {
+        if (localStorage.getItem('topLineClosed') === 'true') {
+            closeTopLine();
+        } else {
+            header.style.top = '35px';
+            container.style.paddingTop = '30px';
+        }
+    }
+
+    if (topLine) {
+        topLine.querySelector('.close-btn').addEventListener('click', closeTopLine);
+    }
+
+    checkTopLineStatus();
+});
+</script>
+{% endblock %}
+
+{% block site_nav %}
+<div class="top-line">
+    <span>🚀 Please note this site is still a work in progress. Not everything may work! 🚀</span>
+    <span class="close-btn">✕</span>
+</div>
+{{ super() }}
+{% endblock %}

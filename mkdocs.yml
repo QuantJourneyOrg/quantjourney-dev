@@ -1,0 +1,126 @@
+site_name: Quant Journey (Dev)
+site_description: "QuantJourney with Code is a blog about quantitative finance, data science, and programming."
+site_author: Jakub Polec
+site_url: http://quantjourney.pro/
+
+# Theme
+theme:
+  name: material
+  custom_dir: 'overrides'
+  features:
+  - navigation.tabs
+  - navigation.top
+  - navigation.indexes
+  - navigation.footer
+  - announce.dismiss
+  - content.action.edit
+  - content.action.view
+  - content.code.annotate
+  - content.code.copy
+  - toc.integrate
+  palette:
+  - media: "(prefers-color-scheme: light)"
+    scheme: default
+    primary: indigo
+    accent: indigo
+    toggle:
+      icon: material/brightness-7
+      name: Switch to dark mode
+  - media: "(prefers-color-scheme: dark)"
+    scheme: slate
+    primary: indigo
+    accent: indigo
+    toggle:
+      icon: material/brightness-4
+      name: Switch to light mode
+  font:
+    text: Roboto
+    code: Roboto Mono
+
+
+extra_javascript:
+- js/custom.js
+extra_css:
+- css/custom.css
+
+use_directory_urls: true
+
+# Plugins
+plugins:
+- blog
+- search:
+    separator: '[\s\u200b\-_,:!=\[\]()"`/]+|\.(?!\d)|&[lg]t;|(?!\b)(?=[A-Z][a-z])'
+
+# Navigation
+nav:
+- Getting Started:
+  - Overview: index.md
+  - Start: documentation.md
+- Documentation:
+  - Overview:
+    - Start: documentation.md
+    - Repository Installation: repo.md
+    - DataBase Installation: installation.md
+  - Data Utils:
+    - Data Manager: utils/data_manager.md
+    - Data Connector: utils/data_connector.md
+  - Assets:
+    - Indices: assets/indices.md
+    - Crypto: assets/crypto.md
+    - Equities: assets/equities.md
+    - ETFs: assets/etfs.md
+    - Forex: assets/forex.md
+    - Futures: assets/futures.md
+    - Macro: assets/macro.md
+    - Bonds: assets/bonds.md
+    - Commodities: assets/commodities.md
+    - REITs: assets/reits.md
+  - Connectors:
+    - CCXT Connector: connectors/ccxt_connector.md
+    - EOD Connector: connectors/eod_connector.md
+    - FMP Connector: connectors/fmp_connector.md
+    - CNNFG Connector: connectors/cnnfg_connector.md
+    - FRED Connector: connectors/fred_connector.md
+    - Oanda Connector: connectors/oanda_connector.md
+    - Quandl Connector: connectors/quandl_connector.md
+    - SEC Connector: connectors/sec_connector.md
+    - Yahoo Finance Connector: connectors/yf_connector.md
+  - Exchanges:
+    - IBKR Exchange: exchanges/ibkr_exchange.md
+  - Backtesting:
+    - Base Class: engine/base_class.md
+    - Cost Model: engine/cost_model.md
+    - Data Manager: engine/data_manager.md
+    - Execution Manager: engine/execution_manager.md
+    - Forecast Engine: engine/forecast_engine.md
+    - Market Regime: engine/market_regime.md
+    - Market Regime with ML: engine/market_regime_with_ml.md
+    - Monte Carlo Analyzer: engine/monte_carlo_analyzer.md
+    - Performance Analytics: engine/performance_analytics.md
+    - Performance Reporting: engine/performance_reporting.md
+    - Portfolio Construction: engine/portfolio_construction.md
+    - Portfolio Optimizer: engine/portfolio_optimizer.md
+    - Profit/Loss Tracker: engine/profitloss_tracker.md
+    - Risk Management: engine/risk_management.md
+    - Signal Generator: engine/signal_generator.md
+    - Transaction Cost Analysis: engine/transaction_cost_analysis.md
+    - Volatility Engine: engine/volatility_engine.md
+  - Portfolio:
+    - Portfolio: portfolio/portfolio.md
+- Strategies:
+  - Overview: strat/strategies.md
+  - Statistical Arbitrage: strat/statistical_arbitrage/overview.md
+  - Momentum Investing: strat/statistical_arbitrage/momentum_investing.md
+  - Mean Reversion: strat/statistical_arbitrage/mean_reversion.md
+  - Machine Learning Techniques: strat/statistical_arbitrage/machine_learning.md
+  - High-Frequency Trading (HFT): strat/statistical_arbitrage/hft.md
+  - Factor Investing: strat/statistical_arbitrage/factor_investing.md
+  - Event-Driven Strategies: strat/statistical_arbitrage/event_driven.md
+- Videos: videos.md
+- Become a Member: membership/membership.md
+- Terms:
+  - Terms of Use: terms/terms-of-usage.md
+  - Privacy Policy: terms/privacy.md
+
+# Your extra settings
+copyright: "&copy; 2024 <a href='https://quantjourney.substack.com' target='_blank'>jpolec</a>"

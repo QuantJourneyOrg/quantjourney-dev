@@ -1,0 +1,304 @@
+/* extra.css */
+
+
+.md-header {
+    background-color: #28548A;
+}
+
+.md-header {
+    padding: 10px 0;
+}
+
+.md-tabs {
+    background-color: #177ed2; /* Replace with your desired color */
+}
+
+.md-footer {
+    background-color: #177ed2;
+    padding: 0rem 0;
+    padding-bottom: 20px;
+}
+
+.md-footer-meta__inner {
+    display: flex;
+    flex-direction: column;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.md-footer-top {
+    display: grid;
+    grid-template-columns: 50% 20% 20%;
+    gap: 2rem;
+}
+
+.md-footer-section--logo {
+    grid-column: span 1;
+}
+
+.md-footer-logo {
+    font-size: 28px;
+    font-weight: bold;
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+.md-footer-description {
+    font-size: 18px;
+    color: #ffffff;
+    line-height: 1;
+    line-height: 1.6;
+}
+
+.md-footer-heading {
+    font-size: 22x;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.md-footer-list {
+    list-style-type: none;
+    padding: 10px;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.md-footer-list li {
+    margin-right: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.md-footer-list a {
+    color: #d0d0d0;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+.md-footer-list a:hover {
+    color: #ffffff;
+}
+
+.md-footer-subscribe {
+    text-align: center;
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.md-footer-subscribe p {
+    font-size: 16px;
+    margin-bottom: 1.2rem;
+    color: #ffffff;
+}
+
+.subscribe-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.subscribe-form input[type="email"] {
+    flex-grow: 1;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 18px;
+}
+
+.subscribe-btn {
+    background-color: #ffa500;
+    color: #0c3bbd;
+    font-weight: 550;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+}
+
+.subscribe-btn:hover {
+    background-color: #a87619;
+}
+
+.md-footer-social {
+    margin-top: 30px;
+    padding-top: 30px;
+    margin-bottom: 30px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.md-footer-social-links {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    justify-content: center;
+}
+
+.md-footer-social__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    color: #ffffff;
+    text-decoration: none;
+    transition: opacity 0.3s ease;
+}
+
+.md-footer-social__link:hover {
+    opacity: 0.7;
+}
+
+.md-footer-social__link svg {
+    margin-right: 0.5rem;
+}
+
+.md-footer-disclaimer {
+    margin-top: 2rem;
+    font-size: 12px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.6;
+    color: #b5b5b5;
+    text-align: center;
+}
+
+@media screen and (max-width: 76.1875em) {
+    .md-footer-top {
+    grid-template-columns: 1fr;
+    }
+
+    .md-footer-section,
+    .md-footer-subscribe,
+    .md-footer-social {
+    width: 100%;
+    }
+
+    .subscribe-form {
+    flex-direction: column;
+    }
+
+    .subscribe-form input[type="email"],
+    .subscribe-btn {
+    width: 100%;
+    }
+
+    .md-footer-social-links {
+    grid-template-columns: 1fr;
+    }
+}
+
+.md-footer__inner {
+    padding-bottom: 15px;
+}
+
+.md-footer__link {
+    display: flex;
+    align-items: center;
+    Xpadding: 15px;
+    transition: opacity 250ms;
+}
+
+.md-footer__link:hover {
+    opacity: 0.7;
+}
+
+.md-footer__button {
+    margin-top: 0.2rem;
+}
+
+.md-footer__title {
+    flex-grow: 1;
+    font-size: 0.9rem;
+    margin: 0 0.8rem;
+}
+
+.md-footer__direction {
+    display: block;
+    font-size: 0.85em;
+    opacity: 0.7;
+}
+
+.custom-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #3f51b5;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 1000;
+    font-weight: bold;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    transition: background-color 0.3s ease;
+}
+
+.custom-button:hover {
+    background-color: #303f9f;
+}
+
+/* Adjust button position when footer is visible */
+.md-footer ~ .custom-button {
+    bottom: 70px;
+}
+
+
+/* Adjust the content width for a specific page */
+.wide-content .md-main__inner {
+    max-width: 1200px; /* You can change this value to your desired width */
+    margin: 0 auto;    /* Center align the content */
+}
+
+.no-right-nav .md-sidebar--secondary {
+    display: none !important;
+}
+
+/* Customed message bar */
+.custom-message-bar {
+    background-color: #333; /* Dark background color */
+    color: #fff; /* White text color */
+    text-align: center;
+    padding: 10px 0;
+    font-size: 14px;
+    font-family: Arial, sans-serif;
+}
+
+.custom-message-bar a {
+    color: #ffa500; /* Link color */
+    text-decoration: underline;
+}
+
+.custom-message-bar a:hover {
+    color: #ff4500; /* Hover link color */
+}
+
+.md-header {
+    position: relative;
+}
+
+.top-line {
+    width: 100%;
+    background-color: #f8f8f8; /* Change this to your desired color */
+    padding: 10px;
+    text-align: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.md-header .md-header-nav {
+    margin-top: 50px; /* Adjust this value based on the height of the top line */
+}
