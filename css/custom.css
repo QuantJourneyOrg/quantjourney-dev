@@ -1,8 +1,58 @@
 /* extra.css */
 
+[data-md-color-scheme="default"] {
+    --md-default-fg-color: #0e1a30;
+    --md-default-bg-color: #ffffff;
+}
+
+[data-md-color-scheme="default"] {
+    --md-primary-fg-color: #FF4500;
+    --md-primary-fg-color--dark: #B8d000;
+}
+
+[data-md-color-scheme="slate"] {
+    --md-primary-fg-color: #FF4500;
+    --md-primary-fg-color--dark: #FF4500;
+}
+
+[data-md-color-scheme="default"] .start-heading {
+    color: #0e1a30;
+}
+
+[data-md-color-scheme="slate"] .start-heading {
+    color: #ffffff;
+}
+
+[data-md-color-scheme="slate"] {
+    --md-default-fg-color: #e0e0e0;
+    --md-default-bg-color: #2e303e;
+}
+
+[data-md-color-scheme="default"] .box-heading {
+    background-color: #f0f8ff;
+}
+
+[data-md-color-scheme="slate"] .box-heading {
+    background-color: #2e303e;
+}
+
+body {
+    color: var(--md-default-fg-color);
+    background-color: var(--md-default-bg-color);
+}
 
 .md-header {
-    background-color: #28548A;
+    background-color: var(--md-primary-fg-color);
+    color: var(--md-primary-bg-color);
+}
+
+/* Dark mode footer background */
+[data-md-color-scheme="slate"] .md-footer .md-footer-meta{
+    background-color: #508ec5;
+  }
+
+.md-header {
+    background-color: #508ec5;
 }
 
 .md-header {
@@ -10,7 +60,7 @@
 }
 
 .md-tabs {
-    background-color: #177ed2; /* Replace with your desired color */
+    background-color: #177ed2;
 }
 
 .md-footer {
@@ -207,7 +257,6 @@
 .md-footer__link {
     display: flex;
     align-items: center;
-    Xpadding: 15px;
     transition: opacity 250ms;
 }
 
