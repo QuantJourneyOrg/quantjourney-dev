@@ -69,8 +69,8 @@ nav:
 - Documentation:
   - Overview:
     - Start: documentation.md
-    - Repository Installation: repo.md
-    - DataBase Installation: installation.md
+    - ✋  Repository Installation: repo.md
+    - ✋ DataBase Installation: installation.md
   - Data Utils:
     - Data Manager: utils/data_manager.md
     - Data Connector: utils/data_connector.md

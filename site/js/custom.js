@@ -1,12 +1,15 @@
-// const script1 = document.createElement('script');
-// script1.src = 'https://storage.ko-fi.com/cdn/scripts/overlay-widget.js';
-// script1.onload = () => {
-//     kofiWidgetOverlay.draw('quantjourney', {
-//         'type': 'floating-chat',
-//         'floating-chat.donateButton.text': 'Join Us',
-//         'floating-chat.donateButton.background-color': '#ffa500',
-//         'floating-chat.donateButton.text-color': '#0c3bbd'
-//     });
+// Global site tag (gtag.js) - Google Analytics
+(function() {
+  var gtagScript = document.createElement('script');
+  gtagScript.async = true;
+  gtagScript.src = 'https://www.googletagmanager.com/gtag/js?id=G-T9FDD6X3NV';
+  document.head.appendChild(gtagScript);
 
-// };
-// document.head.appendChild(script1);
+  window.dataLayer = window.dataLayer || [];
+  function gtag() {
+    dataLayer.push(arguments);
+  }
+  window.gtag = gtag;
+  gtag('js', new Date());
+  gtag('config', 'G-T9FDD6X3NV');
+})();
