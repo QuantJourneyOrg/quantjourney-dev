@@ -12,28 +12,28 @@
         <meta name="author" content="Jakub Polec">
       
       
-        <link rel="canonical" href="http://quantjourney.dev/engine/risk_management/">
+        <link rel="canonical" href="http://quantjourney.dev/docker/">
       
       
-        <link rel="prev" href="../profitloss_tracker/">
+        <link rel="prev" href="../timescale/">
       
       
-        <link rel="next" href="../signal_generator/">
+        <link rel="next" href="../utils/data_manager/">
       
       
-      <link rel="icon" href="../../images/logo_transparent.png">
+      <link rel="icon" href="../images/logo_transparent.png">
       <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.30">
     
     
       
-        <title>Risk Management - Quant Journey (Dev)</title>
+        <title>✋ Docker Installation - Quant Journey (Dev)</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.3cba04c6.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.3cba04c6.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -52,9 +52,9 @@
       
     
     
-      <link rel="stylesheet" href="../../css/custom.css">
+      <link rel="stylesheet" href="../css/custom.css">
     
-    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
   
@@ -90,7 +90,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#module-information" class="md-skip">
+        <a href="#prerequisites" class="md-skip">
           Skip to content
         </a>
       
@@ -104,9 +104,9 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../.." title="Quant Journey (Dev)" class="md-header__button md-logo" aria-label="Quant Journey (Dev)" data-md-component="logo">
+    <a href=".." title="Quant Journey (Dev)" class="md-header__button md-logo" aria-label="Quant Journey (Dev)" data-md-component="logo">
       
-  <img src="../../images/logo_transparent.png" alt="logo">
+  <img src="../images/logo_transparent.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -123,7 +123,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Risk Management
+              ✋ Docker Installation
             
           </span>
         </div>
@@ -220,7 +220,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../.." class="md-tabs__link">
+        <a href=".." class="md-tabs__link">
           
   
     
@@ -250,7 +250,7 @@
     
     
       <li class="md-tabs__item md-tabs__item--active">
-        <a href="../../documentation/" class="md-tabs__link">
+        <a href="../documentation/" class="md-tabs__link">
           
   
     
@@ -273,7 +273,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../strat/strategies/" class="md-tabs__link">
+        <a href="../strat/strategies/" class="md-tabs__link">
           
   
     
@@ -291,7 +291,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../videos/" class="md-tabs__link">
+      <a href="../videos/" class="md-tabs__link">
         
   
     
@@ -308,7 +308,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../membership/membership/" class="md-tabs__link">
+      <a href="../membership/membership/" class="md-tabs__link">
         
   
     
@@ -327,7 +327,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../terms/terms-of-usage/" class="md-tabs__link">
+        <a href="../terms/terms-of-usage/" class="md-tabs__link">
           
   
     
@@ -364,9 +364,9 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="Quant Journey (Dev)" class="md-nav__button md-logo" aria-label="Quant Journey (Dev)" data-md-component="logo">
+    <a href=".." title="Quant Journey (Dev)" class="md-nav__button md-logo" aria-label="Quant Journey (Dev)" data-md-component="logo">
       
-  <img src="../../images/logo_transparent.png" alt="logo">
+  <img src="../images/logo_transparent.png" alt="logo">
 
     </a>
     Quant Journey (Dev)
@@ -404,7 +404,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../.." class="md-nav__link ">
+            <a href=".." class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -437,7 +437,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../documentation/" class="md-nav__link">
+      <a href="../documentation/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -521,8 +521,10 @@
                 
   
   
+    
   
   
+  
     
     
       
@@ -542,11 +544,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" checked>
         
           
           <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
@@ -560,7 +562,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2_1">
             <span class="md-nav__icon md-icon"></span>
             Overview
@@ -574,7 +576,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../documentation/" class="md-nav__link">
+      <a href="../documentation/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -595,7 +597,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../repo/" class="md-nav__link">
+      <a href="../repo/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -616,7 +618,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../installation/" class="md-nav__link">
+      <a href="../installation/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -637,7 +639,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../timescale/" class="md-nav__link">
+      <a href="../timescale/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -655,10 +657,28 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../docker/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    ✋ Docker Installation
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -667,6 +687,102 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prerequisites
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installation-steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      Installation Steps
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Installation Steps">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#for-windows" class="md-nav__link">
+    <span class="md-ellipsis">
+      For Windows:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#for-macos" class="md-nav__link">
+    <span class="md-ellipsis">
+      For macOS:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#for-ubuntu" class="md-nav__link">
+    <span class="md-ellipsis">
+      For Ubuntu:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#verifying-the-installation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Verifying the Installation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#running-your-first-container" class="md-nav__link">
+    <span class="md-ellipsis">
+      Running Your First Container
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#next-steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      Next Steps
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -731,7 +847,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../utils/data_manager/" class="md-nav__link">
+      <a href="../utils/data_manager/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -752,7 +868,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../utils/data_connector/" class="md-nav__link">
+      <a href="../utils/data_connector/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -841,7 +957,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../assets/indices/" class="md-nav__link">
+      <a href="../assets/indices/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -862,7 +978,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../assets/crypto/" class="md-nav__link">
+      <a href="../assets/crypto/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -883,7 +999,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../assets/equities/" class="md-nav__link">
+      <a href="../assets/equities/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -904,7 +1020,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../assets/etfs/" class="md-nav__link">
+      <a href="../assets/etfs/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -925,7 +1041,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../assets/forex/" class="md-nav__link">
+      <a href="../assets/forex/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -946,7 +1062,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../assets/futures/" class="md-nav__link">
+      <a href="../assets/futures/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -967,7 +1083,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../assets/macro/" class="md-nav__link">
+      <a href="../assets/macro/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -988,7 +1104,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../assets/bonds/" class="md-nav__link">
+      <a href="../assets/bonds/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1009,7 +1125,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../assets/commodities/" class="md-nav__link">
+      <a href="../assets/commodities/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1030,7 +1146,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../assets/reits/" class="md-nav__link">
+      <a href="../assets/reits/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1117,7 +1233,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../connectors/ccxt_connector/" class="md-nav__link">
+      <a href="../connectors/ccxt_connector/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1138,7 +1254,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../connectors/eod_connector/" class="md-nav__link">
+      <a href="../connectors/eod_connector/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1159,7 +1275,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../connectors/fmp_connector/" class="md-nav__link">
+      <a href="../connectors/fmp_connector/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1180,7 +1296,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../connectors/cnnfg_connector/" class="md-nav__link">
+      <a href="../connectors/cnnfg_connector/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1201,7 +1317,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../connectors/fred_connector/" class="md-nav__link">
+      <a href="../connectors/fred_connector/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1222,7 +1338,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../connectors/oanda_connector/" class="md-nav__link">
+      <a href="../connectors/oanda_connector/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1243,7 +1359,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../connectors/quandl_connector/" class="md-nav__link">
+      <a href="../connectors/quandl_connector/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1264,7 +1380,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../connectors/sec_connector/" class="md-nav__link">
+      <a href="../connectors/sec_connector/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1285,7 +1401,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../connectors/yf_connector/" class="md-nav__link">
+      <a href="../connectors/yf_connector/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1356,7 +1472,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../exchanges/ibkr_exchange/" class="md-nav__link">
+      <a href="../exchanges/ibkr_exchange/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1382,10 +1498,8 @@
                 
   
   
-    
   
   
-  
     
     
       
@@ -1429,11 +1543,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_6" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_6" >
         
           
           <label class="md-nav__link" for="__nav_2_6" id="__nav_2_6_label" tabindex="0">
@@ -1447,7 +1561,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_6_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_6_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2_6">
             <span class="md-nav__icon md-icon"></span>
             Backtesting
@@ -1461,7 +1575,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../base_class/" class="md-nav__link">
+      <a href="../engine/base_class/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1482,7 +1596,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../cost_model/" class="md-nav__link">
+      <a href="../engine/cost_model/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1503,7 +1617,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../data_manager/" class="md-nav__link">
+      <a href="../engine/data_manager/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1524,7 +1638,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../execution_manager/" class="md-nav__link">
+      <a href="../engine/execution_manager/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1545,7 +1659,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../forecast_engine/" class="md-nav__link">
+      <a href="../engine/forecast_engine/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1566,7 +1680,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../market_regime/" class="md-nav__link">
+      <a href="../engine/market_regime/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1587,7 +1701,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../market_regime_with_ml/" class="md-nav__link">
+      <a href="../engine/market_regime_with_ml/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1608,7 +1722,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../monte_carlo_analyzer/" class="md-nav__link">
+      <a href="../engine/monte_carlo_analyzer/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1629,7 +1743,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../performance_analytics/" class="md-nav__link">
+      <a href="../engine/performance_analytics/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1650,7 +1764,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../performance_reporting/" class="md-nav__link">
+      <a href="../engine/performance_reporting/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1671,7 +1785,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../portfolio_construction/" class="md-nav__link">
+      <a href="../engine/portfolio_construction/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1692,7 +1806,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../portfolio_optimizer/" class="md-nav__link">
+      <a href="../engine/portfolio_optimizer/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1713,7 +1827,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../profitloss_tracker/" class="md-nav__link">
+      <a href="../engine/profitloss_tracker/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1731,30 +1845,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Risk Management
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../engine/risk_management/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1763,254 +1857,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#class-riskmanagement" class="md-nav__link">
-    <span class="md-ellipsis">
-      Class: RiskManagement
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Class: RiskManagement">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#method-init" class="md-nav__link">
-    <span class="md-ellipsis">
-      Method: init
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#method-load_risk_params" class="md-nav__link">
-    <span class="md-ellipsis">
-      Method: load_risk_params
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#method-set_portfolio" class="md-nav__link">
-    <span class="md-ellipsis">
-      Method: set_portfolio
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#method-set_pnl_tracker" class="md-nav__link">
-    <span class="md-ellipsis">
-      Method: set_pnl_tracker
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#method-assess_risk_management" class="md-nav__link">
-    <span class="md-ellipsis">
-      Method: assess_risk_management
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#method-calculate_new_holding_size" class="md-nav__link">
-    <span class="md-ellipsis">
-      Method: calculate_new_holding_size
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#method-adjust_transactions_with_risk_profiles" class="md-nav__link">
-    <span class="md-ellipsis">
-      Method: adjust_transactions_with_risk_profiles
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#method-calculate_instrument_volatility" class="md-nav__link">
-    <span class="md-ellipsis">
-      Method: calculate_instrument_volatility
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#method-calculate_potential_loss" class="md-nav__link">
-    <span class="md-ellipsis">
-      Method: calculate_potential_loss
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#method-calculate_new_drawdown" class="md-nav__link">
-    <span class="md-ellipsis">
-      Method: calculate_new_drawdown
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#method-calculate_liquidity_risk" class="md-nav__link">
-    <span class="md-ellipsis">
-      Method: calculate_liquidity_risk
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#method-calculate_sector_exposure" class="md-nav__link">
-    <span class="md-ellipsis">
-      Method: calculate_sector_exposure
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#method-calculate_portfolio_risk" class="md-nav__link">
-    <span class="md-ellipsis">
-      Method: calculate_portfolio_risk
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#method-check_portfolio_risk" class="md-nav__link">
-    <span class="md-ellipsis">
-      Method: check_portfolio_risk
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#method-calculate_pnl" class="md-nav__link">
-    <span class="md-ellipsis">
-      Method: calculate_pnl
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#method-calculate_kelly_criterion_position_size" class="md-nav__link">
-    <span class="md-ellipsis">
-      Method: calculate_kelly_criterion_position_size
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#method-update_portfolio_metrics" class="md-nav__link">
-    <span class="md-ellipsis">
-      Method: update_portfolio_metrics
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#method-manage_risk" class="md-nav__link">
-    <span class="md-ellipsis">
-      Method: manage_risk
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#method-calculate_order_risk" class="md-nav__link">
-    <span class="md-ellipsis">
-      Method: calculate_order_risk
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#method-calculate_value_at_risk" class="md-nav__link">
-    <span class="md-ellipsis">
-      Method: calculate_value_at_risk
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#method-calculate_expected_shortfall" class="md-nav__link">
-    <span class="md-ellipsis">
-      Method: calculate_expected_shortfall
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#class-unittests" class="md-nav__link">
-    <span class="md-ellipsis">
-      Class: UnitTests
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Class: UnitTests">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#method-run_unit_test" class="md-nav__link">
-    <span class="md-ellipsis">
-      Method: run_unit_test
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -2023,7 +1869,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../signal_generator/" class="md-nav__link">
+      <a href="../engine/signal_generator/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2044,7 +1890,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../transaction_cost_analysis/" class="md-nav__link">
+      <a href="../engine/transaction_cost_analysis/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2065,7 +1911,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../volatility_engine/" class="md-nav__link">
+      <a href="../engine/volatility_engine/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2136,7 +1982,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../portfolio/portfolio.md" class="md-nav__link">
+      <a href="../portfolio/portfolio.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2228,7 +2074,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../strat/strategies/" class="md-nav__link">
+      <a href="../strat/strategies/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2249,7 +2095,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../strat/statistical_arbitrage/overview/" class="md-nav__link">
+      <a href="../strat/statistical_arbitrage/overview/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2270,7 +2116,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../strat/statistical_arbitrage/momentum_investing/" class="md-nav__link">
+      <a href="../strat/statistical_arbitrage/momentum_investing/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2291,7 +2137,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../strat/statistical_arbitrage/mean_reversion/" class="md-nav__link">
+      <a href="../strat/statistical_arbitrage/mean_reversion/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2312,7 +2158,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../strat/statistical_arbitrage/machine_learning/" class="md-nav__link">
+      <a href="../strat/statistical_arbitrage/machine_learning/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2333,7 +2179,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../strat/statistical_arbitrage/hft/" class="md-nav__link">
+      <a href="../strat/statistical_arbitrage/hft/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2354,7 +2200,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../strat/statistical_arbitrage/factor_investing/" class="md-nav__link">
+      <a href="../strat/statistical_arbitrage/factor_investing/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2375,7 +2221,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../strat/statistical_arbitrage/event_driven/" class="md-nav__link">
+      <a href="../strat/statistical_arbitrage/event_driven/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2403,7 +2249,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../videos/" class="md-nav__link">
+      <a href="../videos/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2423,7 +2269,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../membership/membership/" class="md-nav__link">
+      <a href="../membership/membership/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2487,7 +2333,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../terms/terms-of-usage/" class="md-nav__link">
+      <a href="../terms/terms-of-usage/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2508,7 +2354,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../terms/privacy/" class="md-nav__link">
+      <a href="../terms/privacy/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2544,946 +2390,103 @@
                   
 
 
-<h1 id="module-information">Module Information</h1>
-<p><strong>Description:</strong>
-Backtesting Framework for Trading Strategies</p>
-<pre><code>RiskManagment - Class for managing risk in trading strategies.
+<div>
+  <div style="text-align: left; margin-top: 10px; margin-bottom: 0px; padding-bottom: -10px;">
+    <h1 class="start-heading" style="font-size: 36px; margin-bottom: 5px;">Docker Installation Guide</h1>
+  </div>
+</div>
 
-Functions:
-    - manage_portfolio_risk: Perform portfolio-level risk management and diversification analysis.
-    - manage_instrument_risk: Apply risk management rules to the given orders based on portfolio-level risk and configuration settings.
-    - check_risk_limits: Checks whether a given order for an instrument complies with risk limits.
-    - calculate_portfolio_risk: Calculate the portfolio-level risk metric based on the proposed orders.
-    - calculate_instrument_volatility: Calculate the volatility of an instrument.
-    - calculate_portfolio_volatility: Calculate the portfolio-level volatility based on instrument volatilities.
-    - get_historical_returns: Retrieve historical returns for the specified instrument.
-</code></pre>
-<p><strong>Author:</strong> jpolec</p>
-<p><strong>Date:</strong> 27-02-2024 and 01-04-2024</p>
-<h2 id="class-riskmanagement">Class: RiskManagement</h2>
-<h3 id="method-init"><strong>Method: <strong>init</strong></strong></h3>
-<pre><code class="language-python">def __init__(
-    self,
-    config: Dict[str, Any]) -&gt; dict:
-</code></pre>
-<p>Initialize the RiskManagement with the specified configuration.</p>
-<p><strong>Parameters:</strong></p>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>config</code></td>
-<td><code>Dict[str, Any]</code></td>
-<td>Configuration options for the RiskManagement.</td>
-</tr>
-</tbody>
-</table>
-<h3 id="method-load_risk_params"><strong>Method: load_risk_params</strong></h3>
-<pre><code class="language-python">def load_risk_params(
-    self,
-    config: Dict[str, Any]) -&gt; pd.DataFrame: &quot;&quot;&quot; Create DataFrame from nested dictionaries with correct indices and handling Args: config (Dict[str, Any]) -&gt; dict:
-</code></pre>
-<p>Create DataFrame from nested dictionaries with correct indices and handling</p>
-<p><strong>Parameters:</strong></p>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>config</code></td>
-<td><code>Dict[str, Any]</code></td>
-<td>The configuration dictionary with risk parameters.</td>
-</tr>
-</tbody>
-</table>
-<h3 id="method-set_portfolio"><strong>Method: set_portfolio</strong></h3>
-<pre><code class="language-python">def set_portfolio(
-    self,
-    portfolio: PortfolioOptimizer) -&gt; dict:
-</code></pre>
-<p>Register the PortfolioOptimizer instance for the risk management calculations.</p>
-<p><strong>Parameters:</strong></p>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>portfolio</code></td>
-<td><code>PortfolioOptimizer</code></td>
-<td>The PortfolioOptimizer instance.</td>
-</tr>
-</tbody>
-</table>
-<h3 id="method-set_pnl_tracker"><strong>Method: set_pnl_tracker</strong></h3>
-<pre><code class="language-python">def set_pnl_tracker(
-    self,
-    pnl_tracker: ProfitLossTracker) -&gt; dict:
-</code></pre>
-<p>Register the ProfitLossTracker instance for the risk management calculations.add()</p>
-<p><strong>Parameters:</strong></p>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>pnl_tracker</code></td>
-<td><code>ProfitLossTracker</code></td>
-<td>The ProfitLossTracker instance.</td>
-</tr>
-</tbody>
-</table>
-<p><strong>Returns:</strong></p>
-<table>
-<thead>
-<tr>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>None</code></td>
-<td>None</td>
-</tr>
-</tbody>
-</table>
-<h3 id="method-assess_risk_management"><strong>Method: assess_risk_management</strong></h3>
-<pre><code class="language-python">def assess_risk_management(
-    self,
-    market_regime: str,
-    current_date: pd.Timestamp) -&gt; dict:
-</code></pre>
-<p>Assess the risk management strategies based on the identified market regime and current date.</p>
-<p><strong>Parameters:</strong></p>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>market_regime</code></td>
-<td><code>str</code></td>
-<td>The identified market regime ('bull', 'bear', or 'sideways').</td>
-</tr>
-<tr>
-<td><code>current_date</code></td>
-<td><code>pd.Timestamp</code></td>
-<td>The current date for which to adapt the risk management strategies.</td>
-</tr>
-</tbody>
-</table>
-<h3 id="method-calculate_new_holding_size"><strong>Method: calculate_new_holding_size</strong></h3>
-<pre><code class="language-python">def calculate_new_holding_size(
-    self,
-    strategy: str,
-    instrument: str,
-    signal: int,
-    market_data: pd.DataFrame,
-    current_market_regime: str,
-    ) -&gt; dict:
-</code></pre>
-<p>Calculate new holding size for a given instrument and strategy based on risk management rules.</p>
-<pre><code>Explanation:
-</code></pre>
+<p>This guide will walk you through the process of installing Docker on your system. Docker is a platform for developing, shipping, and running applications in containers.</p>
+<h2 id="prerequisites"><strong>Prerequisites</strong></h2>
+<ul>
+<li>A 64-bit operating system</li>
+<li>For Windows: Windows 10 64-bit: Pro, Enterprise, or Education (Build 16299 or later)</li>
+<li>For Mac: macOS 10.14 or newer</li>
+<li>For Linux: A 64-bit version of Ubuntu, Debian, Fedora, or CentOS</li>
+</ul>
+<h2 id="installation-steps"><strong>Installation Steps</strong></h2>
+<h3 id="for-windows">For Windows:</h3>
 <ol>
 <li>
-<p>risk per trade - calculate the risk per trade based on the account size and the risk percentage.</p>
+<p>Download Docker Desktop for Windows from the official Docker website: https://www.docker.com/products/docker-desktop</p>
 </li>
 <li>
-<p>instrument volatility - calculate the instrument volatility based on the ATR value.</p>
+<p>Double-click the installer to run it.</p>
 </li>
 <li>
-<p>position size - calculate the position size based on the risk per trade and the instrument volatility.</p>
+<p>Follow the installation wizard instructions.</p>
 </li>
 <li>
-<p>position change - check if the position change is below the inertia threshold.</p>
+<p>Once installed, start Docker Desktop from the Windows Start menu.</p>
 </li>
 <li>
-<p>max quantity - calculate the maximum quantity based on the available cash.</p>
-</li>
-<li>
-<p>target position size - adjust the position size based on the signal and available cash/quantity.</p>
+<p>You may need to enable virtualization in your BIOS settings if it's not already enabled.</p>
 </li>
 </ol>
-<p><strong>Parameters:</strong></p>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>strategy</code></td>
-<td><code>str</code></td>
-<td>The strategy name.</td>
-</tr>
-<tr>
-<td><code>instrument</code></td>
-<td><code>str</code></td>
-<td>The instrument symbol.</td>
-</tr>
-<tr>
-<td><code>signal</code></td>
-<td><code>int</code></td>
-<td>The signal for the instrument (1 for buy, -1 for sell).</td>
-</tr>
-<tr>
-<td><code>market_data</code></td>
-<td><code>pd.DataFrame</code></td>
-<td>The historical market data for the instrument.</td>
-</tr>
-<tr>
-<td><code>current_market_regime</code></td>
-<td><code>str</code></td>
-<td>The current market regime.</td>
-</tr>
-<tr>
-<td><code>|</code></td>
-<td></td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<p><strong>Returns:</strong></p>
-<table>
-<thead>
-<tr>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>float</code></td>
-<td>The calculated position size.</td>
-</tr>
-</tbody>
-</table>
-<h3 id="method-adjust_transactions_with_risk_profiles"><strong>Method: adjust_transactions_with_risk_profiles</strong></h3>
-<pre><code class="language-python">def adjust_transactions_with_risk_profiles(
-    self,
-    daily_transactions_dict,
-    market_data,
-    current_market_regime) -&gt; dict:
-</code></pre>
-<p>Optimize the transactions based on the risk management rules and market regime.</p>
-<pre><code>It is checking:
-</code></pre>
+<h3 id="for-macos">For macOS:</h3>
 <ol>
 <li>
-<p>Stop-loss level (stop_loss_level) if the potential loss exceeds the stop-loss level.</p>
-<p>It works both for 'buy' and 'sell' orders by adjusting the order quantity.</p>
+<p>Download Docker Desktop for Mac from the official Docker website: https://www.docker.com/products/docker-desktop</p>
 </li>
 <li>
-<p>Volatility scaling (volatility_scaling) to adjust the order quantity based on the instrument volatility.</p>
+<p>Double-click the <code>.dmg</code> file to open the installer.</p>
 </li>
 <li>
-<p>Leverage ratio (leverage_ratio) to apply leverage to the order quantity.</p>
+<p>Drag the Docker icon to the Applications folder.</p>
 </li>
 <li>
-<p>Maximum positions (max_positions) to limit the number of positions in the portfolio.</p>
+<p>Open Docker from the Applications folder.</p>
 </li>
 <li>
-<p>Risk percentage (risk_percentage) to limit the risk per trade based on the account size.</p>
-</li>
-<li>
-<p>Maximum drawdown (max_drawdown) to limit the drawdown based on the new portfolio value.</p>
-</li>
-<li>
-<p>Maximum risk percentage (max_risk_percentage) to limit the risk based on the portfolio value.</p>
-</li>
-<li>
-<p>Liquidity risk (max_liquidity_risk) to limit the order quantity based on the average volume.</p>
-</li>
-<li>
-<p>Sector exposure (max_sector_exposure) to limit the sector exposure based on the portfolio value.</p>
+<p>You may be prompted to authorize Docker with your system password.</p>
 </li>
 </ol>
-<p><strong>Parameters:</strong></p>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>daily_transactions_dict</code></td>
-<td><code>Dict[str, List[Dict[str, Any]]]</code></td>
-<td>A dictionary containing lists of transactions, grouped by strategy.</td>
-</tr>
-<tr>
-<td><code>market_data</code></td>
-<td><code>Dict[str, pd.DataFrame]</code></td>
-<td>The market data for each instrument.</td>
-</tr>
-<tr>
-<td><code>current_market_regime</code></td>
-<td><code>str</code></td>
-<td>The current market regime.</td>
-</tr>
-</tbody>
-</table>
-<p><strong>Returns:</strong></p>
-<table>
-<thead>
-<tr>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>Dict[str, List[Dict[str, Any]]]</code></td>
-<td>A dictionary containing the adjusted lists of transactions, grouped by strategy.</td>
-</tr>
-</tbody>
-</table>
-<h3 id="method-calculate_instrument_volatility"><strong>Method: calculate_instrument_volatility</strong></h3>
-<pre><code class="language-python">def calculate_instrument_volatility(
-    self,
-    instrument: str,
-    market_data: pd.DataFrame) -&gt; dict:
+<h3 id="for-ubuntu">For Ubuntu:</h3>
+<ol>
+<li>
+<p>Update your package index:
+   <code>sudo apt-get update</code></p>
+</li>
+<li>
+<p>Install packages to allow apt to use a repository over HTTPS:
+   <code>sudo apt-get install apt-transport-https ca-certificates curl software-properties-common</code></p>
+</li>
+<li>
+<p>Add Docker's official GPG key:
+   <code>curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -</code></p>
+</li>
+<li>
+<p>Set up the stable repository:
+   <code>sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"</code></p>
+</li>
+<li>
+<p>Update the package index again:
+   <code>sudo apt-get update</code></p>
+</li>
+<li>
+<p>Install Docker CE:
+   <code>sudo apt-get install docker-ce</code></p>
+</li>
+</ol>
+<h2 id="verifying-the-installation"><strong>Verifying the Installation</strong></h2>
+<p>To verify that Docker is installed correctly, run the following command in your terminal or command prompt:</p>
+<pre><code>docker --version
 </code></pre>
-<p>Calculate the volatility of an instrument based on historical data.</p>
-<p><strong>Parameters:</strong></p>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>instrument</code></td>
-<td><code>str</code></td>
-<td>The instrument symbol.</td>
-</tr>
-<tr>
-<td><code>market_data</code></td>
-<td><code>pd.DataFrame</code></td>
-<td>The market data for the instrument.</td>
-</tr>
-</tbody>
-</table>
-<p><strong>Returns:</strong></p>
-<table>
-<thead>
-<tr>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>float</code></td>
-<td>The calculated instrument volatility.</td>
-</tr>
-</tbody>
-</table>
-<h3 id="method-calculate_potential_loss"><strong>Method: calculate_potential_loss</strong></h3>
-<pre><code class="language-python">def calculate_potential_loss(
-    self,
-    instrument: str,
-    quantity: float,
-    instrument_data: pd.DataFrame,
-    current_market_regime: str) -&gt; dict:
+<p>This should display the installed version of Docker.</p>
+<h2 id="running-your-first-container"><strong>Running Your First Container</strong></h2>
+<p>To test your Docker installation, you can run a simple "Hello World" container:</p>
+<pre><code>docker run hello-world
 </code></pre>
-<p>Calculate the potential loss for a given instrument and quantity based on the market data.</p>
-<p><strong>Parameters:</strong></p>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>instrument</code></td>
-<td><code>str</code></td>
-<td>The instrument symbol.</td>
-</tr>
-<tr>
-<td><code>quantity</code></td>
-<td><code>float</code></td>
-<td>The order quantity.</td>
-</tr>
-<tr>
-<td><code>instrument_data</code></td>
-<td><code>pd.DataFrame</code></td>
-<td>The market data for the instrument.</td>
-</tr>
-<tr>
-<td><code>current_market_regime</code></td>
-<td><code>str</code></td>
-<td>The current market regime.</td>
-</tr>
-</tbody>
-</table>
-<p><strong>Returns:</strong></p>
-<table>
-<thead>
-<tr>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>float</code></td>
-<td>The potential loss.</td>
-</tr>
-</tbody>
-</table>
-<h3 id="method-calculate_new_drawdown"><strong>Method: calculate_new_drawdown</strong></h3>
-<pre><code class="language-python">def calculate_new_drawdown(
-    self,
-    instrument: str,
-    quantity: float,
-    market_data: Dict[str, pd.DataFrame]) -&gt; dict:
-</code></pre>
-<p>Calculate the new drawdown for a given instrument and quantity based on the market data.</p>
-<p><strong>Parameters:</strong></p>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>instrument</code></td>
-<td><code>str</code></td>
-<td>The instrument symbol.</td>
-</tr>
-<tr>
-<td><code>quantity</code></td>
-<td><code>float</code></td>
-<td>The order quantity.</td>
-</tr>
-<tr>
-<td><code>market_data</code></td>
-<td><code>Dict[str, pd.DataFrame]</code></td>
-<td>The market data for each instrument.</td>
-</tr>
-</tbody>
-</table>
-<p><strong>Returns:</strong></p>
-<table>
-<thead>
-<tr>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>float</code></td>
-<td>The new drawdown.</td>
-</tr>
-</tbody>
-</table>
-<h3 id="method-calculate_liquidity_risk"><strong>Method: calculate_liquidity_risk</strong></h3>
-<pre><code class="language-python">def calculate_liquidity_risk(
-    self,
-    instrument: str,
-    quantity: float,
-    market_data: Dict[str, pd.DataFrame]) -&gt; dict:
-</code></pre>
-<p>Calculate the liquidity risk for a given instrument and order quantity.</p>
-<p><strong>Parameters:</strong></p>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>instrument</code></td>
-<td><code>str</code></td>
-<td>The instrument symbol.</td>
-</tr>
-<tr>
-<td><code>quantity</code></td>
-<td><code>float</code></td>
-<td>The order quantity.</td>
-</tr>
-<tr>
-<td><code>market_data</code></td>
-<td><code>Dict[str, pd.DataFrame]</code></td>
-<td>The market data for each instrument.</td>
-</tr>
-</tbody>
-</table>
-<p><strong>Returns:</strong></p>
-<table>
-<thead>
-<tr>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>float</code></td>
-<td>The liquidity risk.</td>
-</tr>
-</tbody>
-</table>
-<h3 id="method-calculate_sector_exposure"><strong>Method: calculate_sector_exposure</strong></h3>
-<pre><code class="language-python">def calculate_sector_exposure(
-    self,
-    instrument: str,
-    quantity: float,
-    market_data: Dict[str, pd.DataFrame]) -&gt; dict:
-</code></pre>
-<p>Calculate the sector exposure for a given instrument and order quantity.</p>
-<p><strong>Parameters:</strong></p>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>instrument</code></td>
-<td><code>str</code></td>
-<td>The instrument symbol.</td>
-</tr>
-<tr>
-<td><code>quantity</code></td>
-<td><code>float</code></td>
-<td>The order quantity.</td>
-</tr>
-<tr>
-<td><code>market_data</code></td>
-<td><code>Dict[str, pd.DataFrame]</code></td>
-<td>The market data for each instrument.</td>
-</tr>
-</tbody>
-</table>
-<p><strong>Returns:</strong></p>
-<table>
-<thead>
-<tr>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>float</code></td>
-<td>The sector exposure as a percentage of the portfolio value.</td>
-</tr>
-</tbody>
-</table>
-<h3 id="method-calculate_portfolio_risk"><strong>Method: calculate_portfolio_risk</strong></h3>
-<pre><code class="language-python">def calculate_portfolio_risk(
-    self,
-    market_data: Dict[str, pd.DataFrame]) -&gt; dict:
-</code></pre>
-<p>Calculate the portfolio risk based on the current positions and market data.</p>
-<p><strong>Parameters:</strong></p>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>market_data</code></td>
-<td><code>Dict[str, pd.DataFrame]</code></td>
-<td>The market data for each instrument.</td>
-</tr>
-</tbody>
-</table>
-<p><strong>Returns:</strong></p>
-<table>
-<thead>
-<tr>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>float</code></td>
-<td>The calculated portfolio risk.</td>
-</tr>
-</tbody>
-</table>
-<h3 id="method-check_portfolio_risk"><strong>Method: check_portfolio_risk</strong></h3>
-<pre><code class="language-python">def check_portfolio_risk(
-    self,
-    market_data: Dict[str, pd.DataFrame]) -&gt; dict:
-</code></pre>
-<p>Check if the portfolio risk exceeds the maximum allowed risk.</p>
-<p><strong>Parameters:</strong></p>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>market_data</code></td>
-<td><code>Dict[str, pd.DataFrame]</code></td>
-<td>The market data for each instrument.</td>
-</tr>
-</tbody>
-</table>
-<p><strong>Returns:</strong></p>
-<table>
-<thead>
-<tr>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>bool</code></td>
-<td>True if the portfolio risk exceeds the maximum allowed risk, False otherwise.</td>
-</tr>
-</tbody>
-</table>
-<h3 id="method-calculate_pnl"><strong>Method: calculate_pnl</strong></h3>
-<pre><code class="language-python">def calculate_pnl(
-    self,
-    market_data: Dict[str, pd.DataFrame]) -&gt; dict:
-</code></pre>
-<p>Calculate the profit and loss (PnL) of the portfolio.</p>
-<p><strong>Parameters:</strong></p>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>market_data</code></td>
-<td><code>Dict[str, pd.DataFrame]</code></td>
-<td>The market data for each instrument.</td>
-</tr>
-</tbody>
-</table>
-<h3 id="method-calculate_kelly_criterion_position_size"><strong>Method: calculate_kelly_criterion_position_size</strong></h3>
-<pre><code class="language-python">def calculate_kelly_criterion_position_size(
-    self,
-    win_probability: float,
-    win_loss_ratio: float) -&gt; dict:
-</code></pre>
-<p>Calculate the optimal position size using the Kelly criterion.</p>
-<p><strong>Parameters:</strong></p>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>win_probability</code></td>
-<td><code>float</code></td>
-<td>The probability of a winning trade.</td>
-</tr>
-<tr>
-<td><code>win_loss_ratio</code></td>
-<td><code>float</code></td>
-<td>The ratio of average win to average loss.</td>
-</tr>
-</tbody>
-</table>
-<p><strong>Returns:</strong></p>
-<table>
-<thead>
-<tr>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>float</code></td>
-<td>The optimal position size based on the Kelly criterion.</td>
-</tr>
-</tbody>
-</table>
-<h3 id="method-update_portfolio_metrics"><strong>Method: update_portfolio_metrics</strong></h3>
-<pre><code class="language-python">def update_portfolio_metrics(
-    self,
-    market_data: Dict[str, pd.DataFrame]) -&gt; dict:
-</code></pre>
-<p>Update the portfolio metrics based on the current market data.</p>
-<p><strong>Parameters:</strong></p>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>market_data</code></td>
-<td><code>Dict[str, pd.DataFrame]</code></td>
-<td>The market data for each instrument.</td>
-</tr>
-</tbody>
-</table>
-<h3 id="method-manage_risk"><strong>Method: manage_risk</strong></h3>
-<pre><code class="language-python">def manage_risk(
-    self,
-    orders: List[Dict[str, Any]],
-    market_data: Dict[str, pd.DataFrame]) -&gt; List[Dict[str, Any]] -&gt; List[Dict[str, Any]]: &quot;&quot;&quot; Manage the risk of the portfolio based on the orders and market data. Args: orders (List[Dict[str, Any]]) -&gt; dict:
-</code></pre>
-<p>Manage the risk of the portfolio based on the orders and market data.</p>
-<p><strong>Parameters:</strong></p>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>orders</code></td>
-<td><code>List[Dict[str, Any]]</code></td>
-<td>The list of orders.</td>
-</tr>
-<tr>
-<td><code>market_data</code></td>
-<td><code>Dict[str, pd.DataFrame]</code></td>
-<td>The market data for each instrument.</td>
-</tr>
-</tbody>
-</table>
-<p><strong>Returns:</strong></p>
-<table>
-<thead>
-<tr>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>List[Dict[str, Any]]</code></td>
-<td>The updated list of orders after risk management.</td>
-</tr>
-</tbody>
-</table>
-<h3 id="method-calculate_order_risk"><strong>Method: calculate_order_risk</strong></h3>
-<pre><code class="language-python">def calculate_order_risk(
-    self,
-    instrument: str,
-    quantity: float,
-    market_data: Dict[str, pd.DataFrame]) -&gt; dict:
-</code></pre>
-<p>Calculate the risk of an order.</p>
-<p><strong>Parameters:</strong></p>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>instrument</code></td>
-<td><code>str</code></td>
-<td>The instrument symbol.</td>
-</tr>
-<tr>
-<td><code>quantity</code></td>
-<td><code>float</code></td>
-<td>The order quantity.</td>
-</tr>
-<tr>
-<td><code>market_data</code></td>
-<td><code>Dict[str, pd.DataFrame]</code></td>
-<td>The market data for each instrument.</td>
-</tr>
-</tbody>
-</table>
-<p><strong>Returns:</strong></p>
-<table>
-<thead>
-<tr>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>float</code></td>
-<td>The calculated order risk.</td>
-</tr>
-</tbody>
-</table>
-<h3 id="method-calculate_value_at_risk"><strong>Method: calculate_value_at_risk</strong></h3>
-<pre><code class="language-python">def calculate_value_at_risk(
-    self,
-    instrument_data: pd.DataFrame,
-    confidence_level: float = 0.95,
-    lookback_period: int = 252) -&gt; dict:
-</code></pre>
-<p>Calculate the Value at Risk (VaR) for the given instrument data.</p>
-<p><strong>Parameters:</strong></p>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>instrument_data</code></td>
-<td><code>pd.DataFrame</code></td>
-<td>Historical price data for the instrument.</td>
-</tr>
-<tr>
-<td><code>confidence_level</code></td>
-<td><code>float</code></td>
-<td>The confidence level for VaR calculation (default: 0.95).</td>
-</tr>
-<tr>
-<td><code>lookback_period</code></td>
-<td><code>int</code></td>
-<td>The number of historical periods to consider for VaR calculation (default: 252).</td>
-</tr>
-</tbody>
-</table>
-<p><strong>Returns:</strong></p>
-<table>
-<thead>
-<tr>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>float</code></td>
-<td>The calculated Value at Risk (VaR).</td>
-</tr>
-</tbody>
-</table>
-<h3 id="method-calculate_expected_shortfall"><strong>Method: calculate_expected_shortfall</strong></h3>
-<pre><code class="language-python">def calculate_expected_shortfall(
-    self,
-    instrument_data: pd.DataFrame,
-    confidence_level: float = 0.95,
-    lookback_period: int = 252) -&gt; dict:
-</code></pre>
-<p>Calculate the Expected Shortfall (ES) for the given instrument data.</p>
-<p><strong>Parameters:</strong></p>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>instrument_data</code></td>
-<td><code>pd.DataFrame</code></td>
-<td>Historical price data for the instrument.</td>
-</tr>
-<tr>
-<td><code>confidence_level</code></td>
-<td><code>float</code></td>
-<td>The confidence level for ES calculation (default: 0.95).</td>
-</tr>
-<tr>
-<td><code>lookback_period</code></td>
-<td><code>int</code></td>
-<td>The number of historical periods to consider for ES calculation (default: 252).</td>
-</tr>
-</tbody>
-</table>
-<p><strong>Returns:</strong></p>
-<table>
-<thead>
-<tr>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>float</code></td>
-<td>The calculated Expected Shortfall (ES).</td>
-</tr>
-</tbody>
-</table>
-<h2 id="class-unittests">Class: UnitTests</h2>
-<h3 id="method-run_unit_test"><strong>Method: run_unit_test</strong></h3>
-<pre><code class="language-python">def run_unit_test(
-    unit_test: UnitTests) -&gt; dict:
-</code></pre>
+<p>If everything is set up correctly, you should see a welcome message and some additional information about Docker.</p>
+<h2 id="next-steps"><strong>Next Steps</strong></h2>
+<ul>
+<li>Learn basic Docker commands: <code>docker ps</code>, <code>docker images</code>, <code>docker pull</code>, <code>docker run</code></li>
+<li>Explore Docker Hub for pre-built images: https://hub.docker.com/</li>
+<li>Start containerizing your own applications</li>
+</ul>
+<p>Remember to consult the official Docker documentation for more detailed information and advanced usage: https://docs.docker.com/</p>
+<div style="padding: 50px">
+</div>
 
 
 
@@ -3519,7 +2522,7 @@ Functions:
   
     <nav class="md-footer__inner md-grid" aria-label="footer.title">
       
-        <a href="../profitloss_tracker/" class="md-footer__link md-footer__link--prev" rel="prev">
+        <a href="../timescale/" class="md-footer__link md-footer__link--prev" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
           </div>
@@ -3528,19 +2531,19 @@ Functions:
               <span class="md-footer__direction">
                 Previous
               </span>
-              Profit/Loss Tracker
+              ✋ TimescaleDB Installation
             </div>
           </div>
         </a>
       
       
-        <a href="../signal_generator/" class="md-footer__link md-footer__link--next" rel="next">
+        <a href="../utils/data_manager/" class="md-footer__link md-footer__link--next" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Signal Generator
+              Data Manager
             </div>
           </div>
           <div class="md-footer__button md-icon">
@@ -3570,7 +2573,7 @@ Functions:
           <h3 class="md-footer-heading">Terms of Use:</h3>
           <ul class="md-footer-list">
             <li><a href="/terms/terms-of-usage">Terms of Use</a></li>
-            <li><a href="../../terms/privacy">Privacy Policy</a></li>
+            <li><a href="../terms/privacy">Privacy Policy</a></li>
           </ul>
         </div>
       </div>
@@ -3619,12 +2622,12 @@ Functions:
       <div class="md-progress" data-md-component="progress" role="progressbar"></div>
     
     
-    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.top", "navigation.indexes", "navigation.footer", "navigation.tracking", "navigation.instant", "navigation.instant.progress", "announce.dismiss", "content.action.edit", "content.action.view", "content.code.annotate", "content.code.copy", "toc.integrate", "toc.follow"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs", "navigation.top", "navigation.indexes", "navigation.footer", "navigation.tracking", "navigation.instant", "navigation.instant.progress", "announce.dismiss", "content.action.edit", "content.action.view", "content.code.annotate", "content.code.copy", "toc.integrate", "toc.follow"], "search": "../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.fe8b6f2b.min.js"></script>
+      <script src="../assets/javascripts/bundle.fe8b6f2b.min.js"></script>
       
-        <script src="../../js/custom.js"></script>
+        <script src="../js/custom.js"></script>
       
     
   </body>
