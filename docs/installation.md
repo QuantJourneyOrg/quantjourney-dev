@@ -7,11 +7,10 @@
 
 In this section, we'll walk through the process of downloading, installing, and setting up MongoDB on your local machine. We'll also explore how to create a database, user, and run some basic operations using scripts.
 d
-## Video
 
 You can watch a video explaining how to use MongoDB in QuantJourney Framework [here](https://youtu.be/jsTGVXGx6cQ).
 
-## Prerequisites
+## **Prerequisites**
 
 Before we begin, make sure you have the following:
 

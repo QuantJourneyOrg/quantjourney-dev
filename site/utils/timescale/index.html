@@ -12,13 +12,9 @@
         <meta name="author" content="Jakub Polec">
       
       
-        <link rel="canonical" href="http://quantjourney.dev/connectors/sec_connector/">
+        <link rel="canonical" href="http://quantjourney.dev/utils/timescale/">
       
       
-        <link rel="prev" href="../quandl_connector/">
-      
-      
-        <link rel="next" href="../yf_connector/">
       
       
       <link rel="icon" href="../../images/logo_transparent.png">
@@ -26,7 +22,7 @@
     
     
       
-        <title>SEC Connector - Quant Journey (Dev)</title>
+        <title>Installation of TimescaleDB for QuantJourney - Quant Journey (Dev)</title>
       
     
     
@@ -90,7 +86,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#module-information" class="md-skip">
+        <a href="#installation-of-timescaledb-for-quantjourney" class="md-skip">
           Skip to content
         </a>
       
@@ -123,7 +119,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              SEC Connector
+              Installation of TimescaleDB for QuantJourney
             
           </span>
         </div>
@@ -236,20 +232,16 @@
         
   
   
-    
-  
   
     
     
       
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
+      <li class="md-tabs__item">
         <a href="../../documentation/" class="md-tabs__link">
           
   
@@ -462,10 +454,8 @@
       
   
   
-    
   
   
-  
     
     
       
@@ -486,20 +476,17 @@
     
     
       
-        
-        
-      
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
         
           
-          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -510,7 +497,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             Documentation
@@ -708,7 +695,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../utils/data_manager/" class="md-nav__link">
+      <a href="../data_manager/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -729,7 +716,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../utils/data_connector/" class="md-nav__link">
+      <a href="../data_connector/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1033,10 +1020,8 @@
                 
   
   
-    
   
   
-  
     
     
       
@@ -1064,11 +1049,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4" >
         
           
           <label class="md-nav__link" for="__nav_2_4" id="__nav_2_4_label" tabindex="0">
@@ -1082,7 +1067,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2_4">
             <span class="md-nav__icon md-icon"></span>
             Connectors
@@ -1096,7 +1081,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ccxt_connector/" class="md-nav__link">
+      <a href="../../connectors/ccxt_connector/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1117,7 +1102,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../eod_connector/" class="md-nav__link">
+      <a href="../../connectors/eod_connector/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1138,7 +1123,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../fmp_connector/" class="md-nav__link">
+      <a href="../../connectors/fmp_connector/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1159,7 +1144,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../cnnfg_connector/" class="md-nav__link">
+      <a href="../../connectors/cnnfg_connector/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1180,7 +1165,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../fred_connector/" class="md-nav__link">
+      <a href="../../connectors/fred_connector/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1201,7 +1186,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../oanda_connector/" class="md-nav__link">
+      <a href="../../connectors/oanda_connector/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1222,7 +1207,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../quandl_connector/" class="md-nav__link">
+      <a href="../../connectors/quandl_connector/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1240,30 +1225,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    SEC Connector
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../connectors/sec_connector/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1272,158 +1237,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#class-secconnector" class="md-nav__link">
-    <span class="md-ellipsis">
-      Class: SecConnector()
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Class: SecConnector()">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#method-get_edgar_submissions" class="md-nav__link">
-    <span class="md-ellipsis">
-      Method: get_edgar_submissions
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#method-get_edgar_company_facts" class="md-nav__link">
-    <span class="md-ellipsis">
-      Method: get_edgar_company_facts
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#method-get_edgar_company_concept" class="md-nav__link">
-    <span class="md-ellipsis">
-      Method: get_edgar_company_concept
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#method-get_edgar_frame" class="md-nav__link">
-    <span class="md-ellipsis">
-      Method: get_edgar_frame
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#method-calculate_sec13f_holding_changes" class="md-nav__link">
-    <span class="md-ellipsis">
-      Method: calculate_sec13f_holding_changes
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#method-get_13f_filings" class="md-nav__link">
-    <span class="md-ellipsis">
-      Method: get_13f_filings
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#method-flatten_and_process_filings" class="md-nav__link">
-    <span class="md-ellipsis">
-      Method: flatten_and_process_filings
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#method-analyze_investment_trends" class="md-nav__link">
-    <span class="md-ellipsis">
-      Method: analyze_investment_trends
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#method-get_holdings_by_ticker" class="md-nav__link">
-    <span class="md-ellipsis">
-      Method: get_holdings_by_ticker
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#method-identify_new_holdings" class="md-nav__link">
-    <span class="md-ellipsis">
-      Method: identify_new_holdings
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#method-track_disposed_holdings" class="md-nav__link">
-    <span class="md-ellipsis">
-      Method: track_disposed_holdings
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#method-analyze_sector_allocation" class="md-nav__link">
-    <span class="md-ellipsis">
-      Method: analyze_sector_allocation
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#method-generate_investment_report" class="md-nav__link">
-    <span class="md-ellipsis">
-      Method: generate_investment_report
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1436,7 +1249,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../yf_connector/" class="md-nav__link">
+      <a href="../../connectors/yf_connector/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2425,516 +2238,111 @@
                   
 
 
-<h1 id="module-information">Module Information</h1>
-<p><strong>Description:</strong>
-Sec Data Connector of QuantJourney Framework</p>
-<p>SEC Services</p>
+<h1 id="installation-of-timescaledb-for-quantjourney">Installation of TimescaleDB for QuantJourney</h1>
+<p>In this section, we'll walk through the process of setting up TimescaleDB using Docker for the QuantJourney framework. TimescaleDB, an extension of PostgreSQL optimized for time-series data, offers efficient storage and querying capabilities crucial for storing and analyzing high-frequency trading data.</p>
+<h2 id="prerequisites">Prerequisites</h2>
+<p>Before we begin, ensure you have the following:</p>
+<ul>
+<li>Docker installed and running on your system</li>
+<li>Basic knowledge of the command line interface (CLI)</li>
+</ul>
+<h2 id="step-1-prepare-the-installation-script">Step 1: Prepare the Installation Script</h2>
+<p>Create a new file named <code>install_timescaledb.sh</code> and copy the following content into it:</p>
+<pre><code class="language-bash">#!/bin/bash
+
+# Define the host directory where data will be stored
+HOST_DATA_DIR=&quot;$HOME/Documents/jakub/timescaledb_data&quot;
+
+# Database configuration
+DB_PASSWORD=&quot;PaSsWoRd&quot;
+DB_USER=&quot;jakub&quot;
+DB_NAME=&quot;quantjp&quot;
+DB_PORT=&quot;5432&quot;
+TABLE_NAME=&quot;intraday&quot;
+
+# ... (rest of the script)
+</code></pre>
+<blockquote>
+<p><strong>Important:</strong> Before running the script, modify the following variables according to your preferences:</p>
+<ul>
+<li><code>HOST_DATA_DIR</code>: Set this to the directory where you want to store the TimescaleDB data on your host machine.</li>
+<li><code>DB_PASSWORD</code>: Choose a secure password for your database.</li>
+<li><code>DB_USER</code>: Set your preferred database username.</li>
+<li><code>DB_NAME</code>: Set your preferred database name.</li>
+<li><code>DB_PORT</code>: Change this if you want to use a different port (default is 5432).</li>
+<li><code>TABLE_NAME</code>: Change this if you want to use a different name for the main table.</li>
+</ul>
+</blockquote>
+<h2 id="step-2-make-the-script-executable">Step 2: Make the Script Executable</h2>
+<p>In the terminal, navigate to the directory containing the script and run:</p>
+<pre><code class="language-bash">chmod +x install_timescaledb.sh
+</code></pre>
+<p>This command gives execute permissions to the script.</p>
+<h2 id="step-3-run-the-installation-script">Step 3: Run the Installation Script</h2>
+<p>Execute the script by running:</p>
+<pre><code class="language-bash">./install_timescaledb.sh
+</code></pre>
+<p>The script will perform the following actions:</p>
 <ol>
-<li>EDGAR
-https://www.sec.gov/edgar/searchedgar/companysearch
-1) python3 -m pip install sec-edgar-api (https://github.com/jadchaar/sec-edgar-api)
-2) python3 -m pip install sec-api (https://sec-api.io/)
-3) https://www.sec.gov/developer...
-Note: The SEC does not allow "unclassified" bots or automated tools to crawl the site.
-However, `solutions' can be found online, but we will not support them here under Fair Access protocls.</li>
-<li>SEC-API</li>
+<li>Check if Docker is installed and running.</li>
+<li>Create necessary directories and files.</li>
+<li>Start the TimescaleDB container using Docker Compose.</li>
+<li>Initialize the database schema with the <code>intraday</code> table and necessary indexes.</li>
+<li>Create roles for read-only and read-write access.</li>
+<li>Insert a sample record to verify the setup.</li>
 </ol>
-<p><strong>Author:</strong> jpolec</p>
-<p><strong>Date:</strong> 18-03-2024</p>
-<h2 id="class-secconnector">Class: SecConnector()</h2>
-<h3 id="method-get_edgar_submissions"><strong>Method: get_edgar_submissions</strong></h3>
-<pre><code class="language-python">def get_edgar_submissions(
-            cik: str
-        ) -&gt; list
-</code></pre>
-<p>Retrieve a list of submissions for a given CIK.</p>
-<p>Examples:</p>
-<pre><code class="language-python">submissions = get_edgar_submissions(cik='0000320193')
+<h2 id="step-4-verify-the-installation">Step 4: Verify the Installation</h2>
+<p>After the script completes, it will display connection information. You should see output similar to:</p>
+<pre><code>TimescaleDB setup complete. You can connect to the database on localhost:5432
+Database: quantjp
+User: jakub
+Password: PaSsWoRd
+Table: intraday
+Please save this information securely and update your application configuration.
 
+You can connect to the database using the following command:
+psql -d &quot;postgres://jakub:PaSsWoRd@localhost:5432/quantjp&quot;
 </code></pre>
-<p><strong>Parameters:</strong></p>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>cik</code></td>
-<td><code>str</code></td>
-<td>Central Index Key of the company.</td>
-</tr>
-</tbody>
-</table>
-<p><strong>Returns:</strong></p>
-<table>
-<thead>
-<tr>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>list</code></td>
-<td>List of submission details.</td>
-</tr>
-</tbody>
-</table>
-<h3 id="method-get_edgar_company_facts"><strong>Method: get_edgar_company_facts</strong></h3>
-<pre><code class="language-python">def get_edgar_company_facts(
-            cik: str
-        ) -&gt; dict
+<p>Make sure to save this information securely, as you'll need it to configure your application.</p>
+<h2 id="step-5-connect-to-timescaledb">Step 5: Connect to TimescaleDB</h2>
+<p>You can connect to the database using the <code>psql</code> command provided in the script output. This will allow you to interact with the database directly and run SQL queries.</p>
+<h2 id="usage-in-quantjourney">Usage in QuantJourney</h2>
+<p>The <code>intraday</code> table is set up with the following schema:</p>
+<pre><code class="language-sql">CREATE TABLE IF NOT EXISTS intraday (
+    time TIMESTAMPTZ NOT NULL,
+    symbol TEXT NOT NULL,
+    price DOUBLE PRECISION NOT NULL,
+    volume BIGINT NOT NULL,
+    conditions INTEGER[],
+    dark_pool BOOLEAN,
+    market_state TEXT,
+    data_source TEXT NOT NULL,
+    PRIMARY KEY (time, symbol, data_source)
+);
 </code></pre>
-<p>Retrieve company facts for a given CIK.</p>
-<p>Examples:</p>
-<pre><code class="language-python">company_facts = get_edgar_company_facts(cik='0000320193')
+<p>This table is optimized for storing time-series data, with automatic partitioning and indexing for efficient querying.</p>
+<p>In your QuantJourney application, you can use the <code>batch_insert_worker</code> method to efficiently insert data into the database:</p>
+<pre><code class="language-python">async def batch_insert_worker(self):
+    batch = []
+    while self.is_active:
+        try:
+            symbol, data = await self.batch_insert_queue.get()
+            batch.append((symbol, data))
 
-{'cik': 320193, 'entityName': 'Apple Inc.', 'facts': {'dei': {'EntityCommonStockSharesOutstanding':
-{'label': 'Entity Common Stock, Shares Outstanding', 'description': &quot;Indicate number of shares or
-other units outstanding of each of registrant's classes of capital or common stock or other ownership
-interests, if and as stated on cover of related periodic report. Where multiple classes or units exist
-define each class/interest by adding class of stock items such as Common Class A [Member], Common Class B [Member]
-or Partnership Interest [Member] onto the Instrument [Domain] of the Entity Listings, Instrument.&quot;,
-'units': {'shares': [{'end': '2009-06-27', 'val': 895816758, 'accn': '0001193125-09-153165', 'fy': 2009,
-'fp': 'Q3', 'form': '10-Q', 'filed': '2009-07-22', 'frame': 'CY2009Q2I'}, {'end': '2009-10-16',
-'val': 900678473, 'accn': '0001193125-09-214859', 'fy': 2009, 'fp': 'FY', 'form': '10-K', 'filed': '2009-10-27'},
-{'end': '2009-10-16', 'val': 900678473, 'accn': '0001193125-10-012091', 'fy': 2009, 'fp': 'FY', 'form': '10-K/A', 'filed':
-
+            if len(batch) &gt;= 100 or (len(batch) &gt; 0 and self.batch_insert_queue.empty()):
+                async with self.db_pool.acquire() as conn:
+                    await conn.executemany('''
+                        INSERT INTO intraday (time, symbol, price, volume)
+                        VALUES ($1, $2, $3, $4)
+                    ''', [(datetime.fromtimestamp(d['t']), s, d['p'], d['v']) for s, d in batch])
+                logger.info(f&quot;Inserted batch of {len(batch)} records into database&quot;)
+                batch = []
+        except Exception as e:
+            logger.error(f&quot;Error in batch insert: {str(e)}&quot;, exc_info=True)
 </code></pre>
-<p><strong>Parameters:</strong></p>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>cik</code></td>
-<td><code>str</code></td>
-<td>Central Index Key of the company.</td>
-</tr>
-</tbody>
-</table>
-<p><strong>Returns:</strong></p>
-<table>
-<thead>
-<tr>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>dict</code></td>
-<td>Dictionary of company facts.</td>
-</tr>
-</tbody>
-</table>
-<h3 id="method-get_edgar_company_concept"><strong>Method: get_edgar_company_concept</strong></h3>
-<pre><code class="language-python">def get_edgar_company_concept(
-            cik: str,
-            taxonomy: str = &quot;dei&quot;,
-            tag: str = &quot;EntityPublicFloat&quot;
-        ) -&gt; dict
-</code></pre>
-<p>Retrieve company concept data for a given CIK.</p>
-<p>Examples:</p>
-<pre><code class="language-python">company_concept = get_edgar_company_concept(cik='0000320193', taxonomy='dei', tag='EntityPublicFloat')
-
-</code></pre>
-<p><strong>Parameters:</strong></p>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>cik</code></td>
-<td><code>str</code></td>
-<td>Central Index Key of the company.</td>
-</tr>
-<tr>
-<td><code>taxonomy</code></td>
-<td><code>str, optional</code></td>
-<td>Taxonomy for the concept data. Defaults to "dei".</td>
-</tr>
-<tr>
-<td><code>tag</code></td>
-<td><code>str, optional</code></td>
-<td>Tag for the concept data. Defaults to "EntityPublicFloat".</td>
-</tr>
-</tbody>
-</table>
-<p><strong>Returns:</strong></p>
-<table>
-<thead>
-<tr>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>dict</code></td>
-<td>Dictionary of company concept data.</td>
-</tr>
-</tbody>
-</table>
-<h3 id="method-get_edgar_frame"><strong>Method: get_edgar_frame</strong></h3>
-<pre><code class="language-python">def get_edgar_frame(
-            taxonomy: str = &quot;us-gaap&quot;,
-            tag: str = &quot;AccountsPayableCurrent&quot;,
-            unit: str = &quot;USD&quot;,
-            year: str = &quot;2022&quot;,
-            quarter: int = 1
-        ) -&gt; pd.DataFrame
-</code></pre>
-<p>Retrieve financial data for a given taxonomy, tag, and filing period.</p>
-<p>Examples:</p>
-<pre><code class="language-python">financial_data = get_edgar_frame(taxonomy=&quot;us-gaap&quot;, tag=&quot;AccountsPayableCurrent&quot;, unit=&quot;USD&quot;, year=&quot;2022&quot;, quarter=1)
-
-</code></pre>
-<p><strong>Parameters:</strong></p>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>taxonomy</code></td>
-<td><code>str, optional</code></td>
-<td>Taxonomy for the financial data. Defaults to "us-gaap".</td>
-</tr>
-<tr>
-<td><code>tag</code></td>
-<td><code>str, optional</code></td>
-<td>Tag for the financial data. Defaults to "AccountsPayableCurrent".</td>
-</tr>
-<tr>
-<td><code>unit</code></td>
-<td><code>str, optional</code></td>
-<td>Unit of the financial data. Defaults to "USD".</td>
-</tr>
-<tr>
-<td><code>year</code></td>
-<td><code>str, optional</code></td>
-<td>Year of the filing period. Defaults to "2022".</td>
-</tr>
-<tr>
-<td><code>quarter</code></td>
-<td><code>int, optional</code></td>
-<td>Quarter of the filing period. Defaults to 1.</td>
-</tr>
-</tbody>
-</table>
-<p><strong>Returns:</strong></p>
-<table>
-<thead>
-<tr>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>pd.DataFrame</code></td>
-<td>DataFrame of financial data.</td>
-</tr>
-</tbody>
-</table>
-<h3 id="method-calculate_sec13f_holding_changes"><strong>Method: calculate_sec13f_holding_changes</strong></h3>
-<pre><code class="language-python">def calculate_sec13f_holding_changes(
-            df: pd.DataFrame,
-            start_date: str = '2021-03-31',
-            end_date: str = '2021-06-30'
-        ) -&gt; pd.DataFrame
-</code></pre>
-<p>Calculate changes in holdings between two reporting periods.</p>
-<p>Examples:</p>
-<pre><code class="language-python">holding_changes = calculate_sec13f_holding_changes(df, start_date='2021-03-31', end_date='2021-06-30')
-
-</code></pre>
-<p><strong>Parameters:</strong></p>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>df</code></td>
-<td><code>pd.DataFrame</code></td>
-<td>DataFrame containing 13F holdings data.</td>
-</tr>
-<tr>
-<td><code>start_date</code></td>
-<td><code>str</code></td>
-<td>Start date of the comparison period in 'YYYY-MM-DD' format.</td>
-</tr>
-<tr>
-<td><code>end_date</code></td>
-<td><code>str</code></td>
-<td>End date of the comparison period in 'YYYY-MM-DD' format.</td>
-</tr>
-</tbody>
-</table>
-<p><strong>Returns:</strong></p>
-<table>
-<thead>
-<tr>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>pd.DataFrame</code></td>
-<td>DataFrame containing holding changes.</td>
-</tr>
-</tbody>
-</table>
-<h3 id="method-get_13f_filings"><strong>Method: get_13f_filings</strong></h3>
-<pre><code class="language-python">def get_13f_filings(
-            cik: str,
-            start_date='2021-01-01'
-        ) -&gt; list
-</code></pre>
-<p>Fetch 13F filings from the SEC Edgar system.
-<strong>Parameters:</strong></p>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>cik</code></td>
-<td><code>str</code></td>
-<td>Central Index Key of the company.</td>
-</tr>
-<tr>
-<td><code>start_date</code></td>
-<td><code>str</code></td>
-<td>Start date for fetching filings in 'YYYY-MM-DD' format.</td>
-</tr>
-</tbody>
-</table>
-<p><strong>Returns:</strong></p>
-<table>
-<thead>
-<tr>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>list</code></td>
-<td>List of 13F filings.</td>
-</tr>
-</tbody>
-</table>
-<h3 id="method-flatten_and_process_filings"><strong>Method: flatten_and_process_filings</strong></h3>
-<pre><code class="language-python">def flatten_and_process_filings(
-            filings
-        ) -&gt; pd.DataFrame
-</code></pre>
-<p>Flatten and process raw 13F filings into a structured pandas DataFrame.</p>
-<p>params:
-filings (list): List of 13F filings.</p>
-<p>returns:
-pd.DataFrame: DataFrame containing processed filings data.</p>
-<p><strong>Returns:</strong></p>
-<table>
-<thead>
-<tr>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td></td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<h3 id="method-analyze_investment_trends"><strong>Method: analyze_investment_trends</strong></h3>
-<pre><code class="language-python">def analyze_investment_trends(
-            holding_changes
-        ) -&gt; pd.DataFrame
-</code></pre>
-<p>Analyze investment trends from holding changes data.</p>
-<p>params:
-holding_changes (pd.DataFrame): DataFrame containing holding changes data.</p>
-<p>returns:
-pd.DataFrame: DataFrame containing investment trend analysis.</p>
-<p><strong>Returns:</strong></p>
-<table>
-<thead>
-<tr>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td></td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<h3 id="method-get_holdings_by_ticker"><strong>Method: get_holdings_by_ticker</strong></h3>
-<pre><code class="language-python">def get_holdings_by_ticker(
-            ticker,
-            start_date='2021-01-01',
-            end_date='2021-06-30'
-        ) -&gt; pd.DataFrame
-</code></pre>
-<p>Retrieve holdings information for a specific ticker across filings within the specified period.</p>
-<p>params:</p>
-<p>returns:</p>
-<p><strong>Returns:</strong></p>
-<table>
-<thead>
-<tr>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td></td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<h3 id="method-identify_new_holdings"><strong>Method: identify_new_holdings</strong></h3>
-<pre><code class="language-python">def identify_new_holdings(
-            current_period,
-            previous_period
-        ) -&gt; pd.DataFrame
-</code></pre>
-<p>Identify new holdings in the current period compared to the previous period.</p>
-<p>params:
-current_period:
-previous_period:</p>
-<p>returns:</p>
-<p><strong>Returns:</strong></p>
-<table>
-<thead>
-<tr>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td></td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<h3 id="method-track_disposed_holdings"><strong>Method: track_disposed_holdings</strong></h3>
-<pre><code class="language-python">def track_disposed_holdings(
-            current_period,
-            previous_period
-        ) -&gt; pd.DataFrame
-</code></pre>
-<p>Track holdings that were disposed of since the previous period.</p>
-<p>params:
-current_period:
-previous_period:
-returns:</p>
-<p><strong>Returns:</strong></p>
-<table>
-<thead>
-<tr>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td></td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<h3 id="method-analyze_sector_allocation"><strong>Method: analyze_sector_allocation</strong></h3>
-<pre><code class="language-python">def analyze_sector_allocation(
-            filings
-        ) -&gt; pd.DataFrame
-</code></pre>
-<p>Analyze sector allocation based on the current holdings in the filings.</p>
-<p>params:
-filings:</p>
-<p>returns:</p>
-<p><strong>Returns:</strong></p>
-<table>
-<thead>
-<tr>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td></td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<h3 id="method-generate_investment_report"><strong>Method: generate_investment_report</strong></h3>
-<pre><code class="language-python">def generate_investment_report(
-            new_holdings,
-            disposed_holdings,
-            sector_allocation
-        ) -&gt; dict
-</code></pre>
-<p>Generate a comprehensive report of investment findings.</p>
-<p>params:
-new_holdings:
-disposed_holdings:
-sector_allocation:</p>
-<p>returns:
-dict: Comprehensive investment report.</p>
-<p><strong>Returns:</strong></p>
-<table>
-<thead>
-<tr>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td></td>
-<td></td>
-</tr>
-</tbody>
-</table>
+<p>This batch insert approach minimizes the number of database connections and transactions, significantly improving insert performance.</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>You have now successfully set up TimescaleDB for your QuantJourney framework. This setup provides efficient storage and querying capabilities for your time-series data, enabling more accurate backtesting and strategy refinement. Remember to update your application's configuration with the database connection details provided by the installation script.</p>
 
 
 
@@ -2967,39 +2375,6 @@ dict: Comprehensive investment report.</p>
       
         
 <footer class="md-footer">
-  
-    <nav class="md-footer__inner md-grid" aria-label="footer.title">
-      
-        <a href="../quandl_connector/" class="md-footer__link md-footer__link--prev" rel="prev">
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
-          </div>
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                Previous
-              </span>
-              Quandl Connector
-            </div>
-          </div>
-        </a>
-      
-      
-        <a href="../yf_connector/" class="md-footer__link md-footer__link--next" rel="next">
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                Next
-              </span>
-              Yahoo Finance Connector
-            </div>
-          </div>
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
-          </div>
-        </a>
-      
-    </nav>
   
 
   <div class="md-footer-meta md-typeset">

@@ -71,6 +71,8 @@ nav:
     - Start: documentation.md
     - ✋  Repository Installation: repo.md
     - ✋ DataBase Installation: installation.md
+    - ✋ TimescaleDB Installation: timescale.md
+    - ✋ Docker Installation: docker.md
   - Data Utils:
     - Data Manager: utils/data_manager.md
     - Data Connector: utils/data_connector.md

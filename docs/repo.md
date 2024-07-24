@@ -68,7 +68,10 @@ You should choose data sources based on your specific requirements. Much of the 
 
 If you don't have an access to some of those sources of data, you may leave such section blank.
 
-## **Final Step: Test!**
+<hr style="padding-bottom: 25px">
+</hr>
+
+**Final Step: Test!**
 
 That's all. Your QuantJourney repository should work right now.
 

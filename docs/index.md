@@ -28,7 +28,7 @@
 <ul style="list-style-type: none; padding-left: 0;">
   <li style="margin-bottom: 10px;">
     <img src="/images/icon-discord.png" alt="Discord" style="width: 24px; height: 24px; vertical-align: middle; margin-right: 10px;">
-    <a href="https://discord.gg/WjvuYqym9g">Discord</a> - for discussion in Community
+    <a href="https://discord.gg/Qkvktf7fRv">Discord</a> - for discussion in Community
   </li>
   <li style="margin-bottom: 10px;">
     <img src="/images/icon-youtube.png" alt="YouTube" style="width: 24px; height: 24px; vertical-align: middle; margin-right: 10px;">
